@@ -3,6 +3,7 @@ title: Building the HTML5 Acorn Video Player
 layout: post
 categories: 
 - code
+- design
 - accessibility
 ---
 
