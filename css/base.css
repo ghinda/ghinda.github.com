@@ -1,10 +1,9 @@
 /*
 Ghinda
 www.ghinda.net
-CC-BY3 © Cristian-Ionut Colceriu
+CC-BY3 © Ionut Colceriu
 
 Borrowed some stuff from camendesign.com
-Thanks Kroc!
 */
 
 /* Reset and Generals */
@@ -114,9 +113,11 @@ header {
 	
 	text-align: right;
 }
+header h1 {
+	margin-bottom: 0;
+}
 header h1 a {
-	display: block;
-	float: right;	
+	display: block;	
 	margin-right: -5px;
 }
 header nav {
@@ -160,7 +161,7 @@ header section {
 header section p {
 	margin: 0px;
 		
-	font-size: 11px;
+	font-size: 14px;
 }
 header section p a {
 	padding: 2px 0px;

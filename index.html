@@ -6,10 +6,7 @@ title: frontpage
 {% assign first_post = site.posts.first %}
 <article>
 	<h1><a href="{{ first_post.url }}">{{ first_post.title }}</a></h1>  
-	{{ first_post.content }}
-	<p>
-		<a href="{{ first_post.url }}#comments">Comments &raquo;</a>
-	</p>
+	{{ first_post.content }}	
 </article>
 
 <footer role="contentinfo">
@@ -27,27 +24,5 @@ title: frontpage
 		</ul>
 	</section>
 	
-	<section>
-		<h2>Categories</h2>
-		{% for category in site.categories %}
-			{% assign category_name = category[0] %}
-			<li>
-				<a href="/categories/{{ category_name }}/">{{ category_name }} <span class="count">{{ site.categories[category_name] | size }}</span></a>
-			</li>
-		{% endfor %}
-		</ul>	
-	</section>
-	
-	<!--
-	<section id="twitter-widget">
-		<h2>
-			<a href="http://twitter.com/ghindas/">Follow me on Twitter</a>
-		</h2>
-		<div id="twitter_update_list"></div>
-	</section>
-	
-	<script src="http://widgets.twimg.com/j/2/widget.js"></script>
-	<script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
-	<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/ghindas.json?callback=twitterCallback2&amp;count=5"></script>	
-	-->
+	{% include category_all.html %}	
 </footer>

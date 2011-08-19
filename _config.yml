@@ -3,3 +3,4 @@ permalink: /blog/:year/:month/:day/:title
 pygments: true
 exclude:
 - README
+category_dir: 'blog/category'
