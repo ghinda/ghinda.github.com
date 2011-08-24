@@ -4,11 +4,23 @@ layout: default
 
 <article>
 	<h1>Posts in {{ page.topic }}</h1>
-	<ul>    
-    {% for category, post in site.categories[page.topic] %}
-      <li><span>{{ post.date | date_to_string"  }}</span> <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+	<ul>
+		{% for category, post in site.categories[page.topic] %}
+		<li>
+			<a href="{{ post.url }}">{{ post.title }}</a>
+			<abbr>{{ post.date | date_to_string }}</abbr>
+			<div class="categories">Filed under 
+				{% for item in post.categories %}
+					{% if forloop.last %}
+						and 
+					{% endif %}
+					
+					<a href="/{{ site.category_dir }}/{{ item }}.html">{{ item }}</a>{% unless forloop.last or forloop.rindex == 2%},{% endunless %}
+				{% endfor %}
+			</div>
+		</li>
+		{% endfor %}
+	</ul>
 </article>
 
 <footer role="contentinfo">

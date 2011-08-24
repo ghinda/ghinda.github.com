@@ -1,5 +1,5 @@
 ---
-title: Building the HTML5 Acorn Video Player
+title: Accessible and customizable HTML5 media with Acorn Media Player
 layout: post
 categories: 
 - code

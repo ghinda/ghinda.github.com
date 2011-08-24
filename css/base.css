@@ -149,8 +149,8 @@ header nav a:hover, header nav a:focus {
 header p {
 	clear: both;
 	float: right;
-	width: 180px;	
-		
+	width: 180px;
+	
 	font-size: 14px;
 	text-shadow: 0px 1px #EFD2B1;	
 }
@@ -168,6 +168,9 @@ header section p a {
 }
 header section p a:hover {
 	text-decoration: none;
+}
+.contact-details {
+	line-height: 1.5em;
 }
 /* Search */
 header section input[type=search] {
@@ -197,20 +200,21 @@ body>article {
 article article {
 	position: relative;
 	float: left;
-	margin-right: 25px;
-	margin-left: 0px;
-	width: 600px;	
-	padding: 64px 40px 120px 40px;
+	margin: -1px 25px -110px 0;	
+	width: 680px;	
+	padding: 64px 40px 180px 40px;
 	min-height: 100%;
-		
-	margin-top: -1px;
-	margin-bottom: -25px;
+	
 	background-color: #F5F5F5;
 	border: 1px solid #fff;
 	
 	-moz-box-shadow: 0px -10px 10px #3D2D22;
 	-webkit-box-shadow: 0px 0px 10px #3D2D22;
 	box-shadow: 0 -10px 10px #3D2D22;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
 	
 	font-family: Verdana, Arial, sans-serif;
 	line-height: 1.5em;
@@ -295,12 +299,13 @@ article footer h2 {
 	text-shadow: 0 1px 0 #fff;
 }
 /* Page footer */
-body > footer {
+.site-footer {
 	display: block;
 	overflow: hidden;
 	position: relative;
 	clear: both;
 	width: 602px;
+	height: 80px;
 	padding: 15px 40px;	
 	margin-left: 230px;
 	background-color: #333;
@@ -312,14 +317,14 @@ body > footer {
 	-webkit-box-shadow: 0px -1px 0px #000;
 	box-shadow: 0px -1px 0px #000;
 }
-body > footer a {
+.site-footer a {
 	color: #E2E2E2;
 }
-body > footer p {
+.site-footer p {
 	float: left;
 	width: 50%;
 }
-body > footer p:last-child {
+.site-footer p:last-child {
 	text-align: right;
 }
 /* Commnents Section */

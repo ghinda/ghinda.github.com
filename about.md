@@ -3,15 +3,14 @@ layout: static
 title: About
 ---
 
-Welcome, and thanks for reading. If you want to contact me, check out the contact links on the sidebar.
+Hi, I'm Ionuț Cristian Colceriu, a designer and web worker from Romania.
+----------------------------------------------------------------------------
 
-What is the <a href="http://alcoman.railfan.net/fear.html">Litany Against Fear</a>? It's from the <a href="http://en.wikipedia.org/wiki/Dune_(novel)">Dune novels by Frank Herbert</a>:
+*Ghinda* (romanian for Acorn) is my personal website.
 
-p=. *I must not fear.
-Fear is the mind-killer.
-Fear is the little-death that brings total obliteration.
-I will face my fear.
-I will permit it to pass over me and through me.
-And when it has gone past I will turn the inner eye to see its path.
-Where the fear has gone there will be nothing.
-Only I will remain.*
+I started web development in the dark days when Internet Explorer was the best browser around and we loved to use <a href="http://msdn.microsoft.com/en-us/library/ms532847(v=vs.85).aspx"><code>filter</code></a>, while struggling with Netscape Navigator 4.
+
+During these years I've been working in graphic and print design, illustration, interface design but always kept a strong focus on frontend web development, the holy trinity of HTML, CSS and JavaScript. I've worked with most of the hip CMS's and JavaScript libraries around.
+
+I'm passionate about free software and try to create both my code and graphics using free tools, like [Kate](http://kate-editor.org/) / [Notepad++](http://notepad-plus-plus.org/), [Inkscape](http://inkscape.org/) or [Krita](http://krita.org/).
+
