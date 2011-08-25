@@ -253,7 +253,7 @@ ul li abbr {
 }
 .notice {
 	background-color: #D8E6FF;
-	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAACYQAAAmEBwTBV+gAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAP2SURBVHjajZVbaFxVFIb/vfe5TZprTTPoFLSxIsZLtUmoGi+0IEiFWkWr8SUIKkgf1IdKwEsqglKE6puIrbWgVmzJm4gXCIVGaWofog01NU0lmeZqYuaSOfe9XWdmyCEzI/aHnz2cvfa31v5nOMOUUvgPcbJJtsiJ8srILtku2yFL1JCG2jKWCoVN7x7/eV/Bx8OKibtMXVwvhGChDBcEw9gGU5w+8EzniRbLmis2q1DlxIxsvXHkdM+Z8blP7r39xva729vQkDBg6RqiSj8IkXM8XLq6gvMTM9P339K2//V93UMAVsmqJjidTiceO/jdO8w0X3l5zw6jPmFhbtmB68v119E4bthowfY9nBwe951c/uNT/c++2dqKfASvBPPkE4fevnnLTQMv7u5CesmBF1TFV9Vgc6uFU8PjmJhMHxr//KW3APjrwM27Dt7pW3Uj/X2PWplCsD4vBrzwyFZEOvLjBCq/77YmAx98M+y2mkHPxeP7z4PESwdPiowfHNu7c7s1v+LCdsN1FgS6NdVYNFOyan9q0cbeBzvM8dnspxEr/lV0ntmzObW1s7m+AQXXR6VWHQeffX8R0e3mVxwIwVGpOtNCeyp5z+X7Rh8Hnh4sgYXoaWpsxHLeQU0R8IfReVpLsSBgqJRNA21qacBlXfUAKIOBbpM62l6ASlmC44sDDyFSGCo89f4QhMZRSwliQPHutYzBVYdpmlXZ2Z7EP7aPw4O/QxMCui6w6ivYAYftM9qP83Y8SWANRL4tzhhgNCwVxvmCa2ROFhhN54GyCoGCIVhxog2mgRzFl8nlsZi1Mfs31cmQx2CJyUtTs9dZdfXQ6ZqGYUGjQ1E8uimwXJDwfR+uH2K+EEIEkmIJMb2QRei5QOCRaVUB6MFkDFZqLJfLdud8Dggd0Fm0U7ZEmyWRz+eRdUL8tRwCliKABLgR31lJwF8FdRyLMw4xUuwqzAhcsmaAxi2ZPpdVbmyt2ys9SwBegVjqbAx2W47CXr4KBIDQytbJRnQbmCJ+R5nMj3IkYDREGUr1FAFQWJqBu/HoGlhdGPCgZB8W/wyLhTwCC7JWhI4ObEekRotj9sMHCC5jYFTHyHNjIST6IlbV2411vfoVmpO9SG0rXddIgHGOO5JmBCkBVIALCwGUYoBvAw7lOnUOyMx/rc591AtSNZjt1NC17QQM80kEOzi6UmsNoEc2CeaWgB555ArAfpHwnEH8+luvUkNBTXA8+Wu7ucG+lE2p5mKOjUmgOVWaODMDZOcI7kDPz2alFz4XnD387f/9g8QbW563jGRrv0hou5TOO/wgbJEM0HQ9I2T4h3KCn9zpxffUlWMOSNcKri4kgaSu8cC/zDvn3AHY4FwAAAAASUVORK5CYII=');
+	background-image: url(../images/info-icon.png);
 }
 .error {
 	background-color: #FFD8D8;
@@ -317,7 +317,7 @@ article footer h2 {
 	-webkit-box-shadow: 0px -1px 0px #000;
 	box-shadow: 0px -1px 0px #000;
 }
-.site-footer a {
+.site-footer a, .site-footer a:visited {
 	color: #E2E2E2;
 }
 .site-footer p {
@@ -326,6 +326,14 @@ article footer h2 {
 }
 .site-footer p:last-child {
 	text-align: right;
+}
+/* Posts listing */
+.posts {
+	margin: 0;
+	padding: 0;
+	list-style-type: square;
+	
+	color: #828282;
 }
 /* Commnents Section */
 #comments {
