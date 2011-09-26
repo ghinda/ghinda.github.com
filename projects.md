@@ -9,13 +9,13 @@ This page is pretty empty right now. I'm putting some of my work to rest, and sw
 
 [Acorn Media Player](http://ghinda.net/acornmediaplayer/)
 ---------------------------------------------------------
-Acorn Media Player is a HTML5 media player, with support for both `<audio>` and `<video>`, with a special focus on accessiblity and customization. It's built as a jQuery plugin.
+Acorn Media Player is a HTML5 media player, with support for both `<audio>` and `<video>`, with a special focus on accessibility and customization. It's built as a jQuery plugin.
 
 Features:
 ---------
 * Closed-Captions
 * Dynamic transcript based on closed-captions
-* Easy customization and themeing
+* Easy customization and theming
 * Fullscreen (well Full-page is most browsers) support
 * Buffering indicator
 * Remembers volume level using HTML5 localStorage

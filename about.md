@@ -14,5 +14,5 @@ In recent years I've been more involved with large-scale JavaScript web apps, an
 
 I'm passionate about free software and try to create both my code and graphics using free tools, like [Kate](http://kate-editor.org/) / [Notepad++](http://notepad-plus-plus.org/), [Inkscape](http://inkscape.org/) or [Krita](http://krita.org/).
 
-In case you were wandering, *Ghinda* stands for *acorn*, in Romanian.
+In case you were wondering, *Ghinda* stands for *acorn*, in Romanian.
 
