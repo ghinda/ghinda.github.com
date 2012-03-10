@@ -6,7 +6,7 @@ categories:
 - design
 ---
 
-While testing the [CSS toggle switches]({% post_url 2011-10-21-css-toggle-switches %}) from my last article, I noticed they had issues, or didn't work at all, in various mobile browsers. The only mobile browsers which seemed to properly support the switches were Firefox Mobile and Opera Mobile.
+While testing the [CSS toggle switches](/css-toggle-switches) from my last article, I noticed they had issues, or didn't work at all, in various mobile browsers. The only mobile browsers which seemed to properly support the switches were Firefox Mobile and Opera Mobile.
 
 For both the radio and checkbox-based versions, the switches looked alright but the behavior wasn't working; the toggle buttons didn't move when selected.
 
