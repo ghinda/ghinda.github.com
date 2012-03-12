@@ -43,7 +43,8 @@ The script I put together is pretty straight forward, except for a couple of thi
 /* Minimal Touch support test.
  * You should probably use Modernizr.
  */
-var touchSupport = ('ontouchstart' in window);
+var touchSupport = ('ontouchstart' in window),
+	mobile = (screen.width <= 1024);
 
 // Utility function, needed to get the input elements next to labels
 Object.prototype.previousObject = function() {
@@ -55,8 +56,23 @@ Object.prototype.previousObject = function() {
 
 /* Manualy check the input, for Opera Mini/proxy browsers
  */
-function checkRadio(e) {	
-	e.target.previousObject().checked = true;
+function checkRadio(e) {
+	var input = e.target.previousObject(),
+		inputType = input.getAttribute('type');
+
+	if(inputType === 'checkbox') {
+
+		if(input.getAttribute('checked')) {
+			input.removeAttribute('checked');
+		} else {
+			input.setAttribute('checked', true);
+		}
+
+	} else if(inputType === 'radio') {
+
+		input.setAttribute('checked', true);
+
+	};
 };
 
 /* Force reflow
@@ -81,17 +97,16 @@ var labels = document.querySelectorAll('label');
 
 if(touchSupport) {
 	// Mobile Webkit(Android, iOS, BB, WebOS, etc.), and others with Touch support
-	var i;
-	for(i = 0; i < labels.length; i++ ) {
+	for(var i = 0; i < labels.length; i++ ) {
 		labels[i].ontouchstart = forceReflow;
 	};
-	
-} else {
+
+} else if(mobile) {
 	// Non-touch browsers, Opera Mini and other proxy-browsers
-	for( var i = 0; i < labels.length; i++ ) {
+	for(var i = 0; i < labels.length; i++ ) {
 		labels[i].onclick = checkRadio;
 	};
-	
+
 };
 {% endhighlight %}
 
