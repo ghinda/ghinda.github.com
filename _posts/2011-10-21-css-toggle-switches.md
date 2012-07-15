@@ -121,7 +121,7 @@ This benefits mostly Opera, since it's the only browser that allows you to reach
 
 Every browser, except Chrome, will also focus the label when clicking it. Chrome will only focus it when reached by keyboard.
 
-<a href="http://ghinda.net/css-toggle-switch#radio" class="demo-button">View Demo</a>
+<a href="http://ghinda.net/css-toggle-switch#radio/" class="demo-button">View Demo</a>
 
 ## Checkbox
 
@@ -233,7 +233,7 @@ But we can't change the order of the elements, since we need to reach the `label
 
 Still, it's not an absolute must, since many form layouts place the checkbox before the label, and people are probably used to it. 
 
-<a href="http://ghinda.net/css-toggle-switch#checkbox" class="demo-button">View Demo</a>
+<a href="http://ghinda.net/css-toggle-switch#checkbox/" class="demo-button">View Demo</a>
 
 ## Internet Explorer
 
