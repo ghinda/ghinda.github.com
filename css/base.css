@@ -262,6 +262,24 @@ ul li abbr {
 .notice p, .warning p, .error p {
 	margin: 0px;
 }
+
+a.demo-button {
+	padding: 5px 10px;
+	background-color: #B24E00;
+	
+	color: #fff !important;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a.demo-button:hover {
+	background-color: #D87A31;
+}
+
+a.demo-button:active {
+	background-color: #6B2F00;
+}
+
 /* Article Meta */
 article footer {
 	float: left;

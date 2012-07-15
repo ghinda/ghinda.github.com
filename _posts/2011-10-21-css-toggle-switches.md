@@ -8,6 +8,12 @@ categories:
 - accessibility
 ---
 
+<div class="notice">
+	
+	All the demos from the article are now unified in a single place, which also describes easier usage: <a href="http://ghinda.net/css-toggle-switch/">CSS Toggle Switches</a>.
+	
+</div>
+
 Back in August I saw [Orman Clark](http://www.premiumpixels.com)'s latest work at the time, a [set of beautiful toggle switches](http://www.premiumpixels.com/freebies/sort-switches-toggles-psd/), and decided I'd have a go at creating a functional version of them.
 
 We must start with some meaningful markup, this will ensure our switches are accessible and work everywhere.
@@ -115,11 +121,13 @@ This benefits mostly Opera, since it's the only browser that allows you to reach
 
 Every browser, except Chrome, will also focus the label when clicking it. Chrome will only focus it when reached by keyboard.
 
-Bellow is a demo of the switch, including a tri-state switch and multiple color schemes.
-
-<iframe src="http://ghinda.net/css-toggle-switch/radio/" height="210">i</iframe>
+<a href="http://ghinda.net/css-toggle-switch#radio" class="demo-button">View Demo</a>
 
 ## Checkbox
+
+<div class="warning">
+	<p>This approach has been removed from the latest version of the toggle switches, because of accessibility issues. </p>
+</div>
 
 My next approach was using a checkbox, instead of radio input. This means we can simplify the markup a bit, since we don't have multiple input elements, like in the radio version. 
 
@@ -177,10 +185,6 @@ Add these to the bigger issue, that, even if using a modern screen reader that c
 
 Needless to say, these would be impossible to use using a screen-reader. Which brings me to my next approach. 
 
-Bellow is a demo with this approach. 
-
-<iframe src="http://ghinda.net/css-toggle-switch/checkbox-in-label/" height="50">i</iframe>
-
 ## Checkbox, used properly
 
 Since checkboxes should be used for on/off states, I'm using another one of Orman's great designs as a starting point, this [set of on/off switches](http://www.premiumpixels.com/freebies/onoff-switches-and-toggles-psd/).
@@ -229,9 +233,7 @@ But we can't change the order of the elements, since we need to reach the `label
 
 Still, it's not an absolute must, since many form layouts place the checkbox before the label, and people are probably used to it. 
 
-Bellow is a demo with the proper approach using checkboxes. 
-
-<iframe src="http://ghinda.net/css-toggle-switch/checkbox/" height="50">i</iframe>
+<a href="http://ghinda.net/css-toggle-switch#checkbox" class="demo-button">View Demo</a>
 
 ## Internet Explorer
 
@@ -248,7 +250,15 @@ After some quick testing on mobile browsers (Mobile Safari, Android, S60, Opera 
 
 The switches look right in all the browsers, but the toggle buttons don't move when selected, in either the radio or checkbox versions. 
 
-I'm working on a solution for this, and will follow-up with a new post addressing mobile support for the switches. 
+<p>
+<del>I'm working on a solution for this, and will follow-up with a new post addressing mobile support for the switches. </del>
+</p>
+
+<div class="notice">
+	
+	I've added mobile support for the toggle switches, describing the development process in a new article: <a href="/css-toggle-switches-mobile">Mobile support for the CSS toggle switches</a>.
+	
+</div>
 
 *Any ideas?* You can contribute to the [css-toggle-switch GitHub repository](https://github.com/ghinda/css-toggle-switch) from which the demos are loaded. 
 As usual, any feedback is appreciated.
