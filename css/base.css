@@ -42,6 +42,9 @@ article a:visited {
 article h1 a {
 	color: #333;
 }
+article img {
+	margin: 0 -41px;
+}
 /* Content Info */
 [role='contentinfo'] a {
 	color: #6D2F00;
