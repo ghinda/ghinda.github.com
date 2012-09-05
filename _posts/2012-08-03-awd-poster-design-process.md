@@ -43,7 +43,7 @@ After some initial sketching, this is how the first version looked like.
 
 ## Final version
 
-While I was pretty happy with the first version of the poster, it still wasn't as clear as would've liked it to be. The basic idea was to be able to show the poster to somebody was was unfamiliar with the concept, and they could easily understand it.
+While I was pretty happy with the first version of the poster, it still wasn't as clear as would've liked it to be. The basic idea was to be able to show the poster to somebody who was unfamiliar with the concept, and they could easily understand it.
 
 With this idea in mind, I started sketching and experimenting with including more text, without complicating the overall look of the poster. 
 
