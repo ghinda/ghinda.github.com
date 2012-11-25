@@ -74,4 +74,9 @@ I've opened bug reports for these bugs on the Android bug tracker:
 * [Browser: canvas.toDataURL('image/jpeg') returns image/png](https://code.google.com/p/android/issues/detail?id=39885)
 * [Browser: Trying to send a Blob with XHR2 sends the request with an empty body](https://code.google.com/p/android/issues/detail?id=39882)
 
+And also on the [Device-Bugs issue collection](https://github.com/scottjehl/Device-Bugs):
+
+* [canvas.toDataURL('image/jpeg') returns image/png on Android](https://github.com/scottjehl/Device-Bugs/issues/33)
+* [Trying to send a Blob with XHR2 sends the request with an empty body on Android 4+](https://github.com/scottjehl/Device-Bugs/issues/34)
+
 Please help me get the attention of the Android developers, so that they can get these bugs fixed for newer releases.
