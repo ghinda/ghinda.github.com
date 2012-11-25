@@ -1,5 +1,5 @@
 ---
-title: I &hearts; Adaptive Web Design poster design process
+title: I love Adaptive Web Design poster design process
 published: true
 layout: post
 categories:
