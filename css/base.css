@@ -18,7 +18,9 @@ body {
 	height: 100%;
 	margin: 0px;
 	padding: 0px;	
-	background: #DBDBDB url(/images/wood-tile-background.jpg) repeat-y left top;
+	
+	/*background: #DBDBDB url(/images/wood-tile-background.jpg) repeat-y left top;*/
+	background: #DBDBDB;
 	
 	color: #333;
 	font-family: Arial, sans-serif;
@@ -109,10 +111,10 @@ a[href*="mailto:"]:hover, a[href*="mailto:"]:focus {
 
 /* Header */
 header {
-	float: left;
-	width: 210px;
-	margin-right: 20px;
-	padding-top: 30px;	
+	display: block;
+	padding: 40px 20px;
+	
+	background-color: #e6894c;
 	
 	text-align: right;
 }
@@ -143,19 +145,16 @@ header nav a {
 	text-transform: uppercase;
 	text-decoration: none;
 	letter-spacing: -1px;
-	text-shadow: 0 1px 0 #EFD2B1;
 }
 header nav a:hover, header nav a:focus {
 	color: #b85100;
-	text-shadow: 0 1px 0 #EFD2B1;
 }
 header p {
 	clear: both;
 	float: right;
 	width: 180px;
 	
-	font-size: 14px;
-	text-shadow: 0px 1px #EFD2B1;	
+	font-size: 14px;	
 }
 header section {
 	overflow: hidden;
@@ -197,23 +196,21 @@ header section input[type=search] {
 h1, h2, h3 {
 	letter-spacing: -1px;
 }
-body>article {
+body > article {
 	height: 100%;
 }
 article article {
 	position: relative;
-	float: left;
-	margin: -1px 25px -110px 0;	
-	width: 680px;	
-	padding: 64px 40px 180px 40px;
+	display: block;
+	padding: 30px 20px;
 	min-height: 100%;
 	
 	background-color: #F5F5F5;
 	border: 1px solid #fff;
 	
-	-moz-box-shadow: 0px -10px 10px #3D2D22;
-	-webkit-box-shadow: 0px 0px 10px #3D2D22;
-	box-shadow: 0 -10px 10px #3D2D22;
+	-moz-box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.5);
+	box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.5);
 	
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -244,10 +241,10 @@ ul li abbr {
 /* Notices */
 .warning, .notice, .error {
 	overflow: hidden;
-	margin: 0px -40px;
-	padding: 15px 40px;
+	margin: 0px -20px;
+	padding: 15px 20px;
 	background-repeat: no-repeat;
-	background-position: 10px 17px;
+	background-position: 2px 15px;
 }
 .warning {
 	background-color: #FDFFD8;
@@ -282,11 +279,9 @@ a.demo-button:active {
 
 /* Article Meta */
 article footer {
-	float: left;
-	width: 220px;
-	margin-top: 64px;
-	max-width: 250px;
+	padding: 20px;
 }
+
 article footer>time {	
 	color: #A5A5A5;
 	font-size: 24px;
@@ -322,10 +317,7 @@ article footer h2 {
 	overflow: hidden;
 	position: relative;
 	clear: both;
-	width: 600px;
-	height: 80px;
-	padding: 15px 40px;	
-	margin-left: 230px;
+	padding: 15px 20px;	
 	background-color: #333;
 	border-top: 1px solid #848484;
 	
@@ -471,3 +463,74 @@ iframe {
 .vg { color: #bb60d5 } /* Name.Variable.Global */
 .vi { color: #bb60d5 } /* Name.Variable.Instance */
 .il { color: #40a070 } /* Literal.Number.Integer.Long */
+
+/* Desktop */
+@media only screen and (min-width : 768px) {
+
+	header {
+		float: left;
+		display: block;
+		width: 160px;
+		height: 100%;
+	}
+	
+	article article {
+		position: relative;
+		float: left;
+		margin: -1px 25px -110px 0;	
+		width: 50%;
+		max-width: 680px;	
+		padding: 64px 40px 180px 40px;
+		min-height: 100%;
+	}
+	
+	article article:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -201px;
+		z-index: -1;
+		
+		display: block;
+		width: 200px;
+		height: 100%;
+		
+		background-color: #e6894c;
+	}
+	
+	article footer {
+		float: left;
+		padding: 0;
+		width: 17%;
+		max-width: 220px;
+		margin-top: 64px;
+		max-width: 250px;
+	}
+	
+	.site-footer {
+		clear: both;
+		overflow: hidden;
+		position: relative;
+		margin-bottom: -20px;
+		
+		display: block;
+		width: 50%;
+		max-width: 680px;
+		height: 110px;
+		padding: 15px 40px;
+		margin-left: 200px;
+		background-color: #333;
+		
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;	
+	}
+
+	
+	.warning, .notice, .error {
+		padding: 15px 40px;
+		margin: 0px -40px;
+		background-position: 10px 15px;
+	}
+
+}
