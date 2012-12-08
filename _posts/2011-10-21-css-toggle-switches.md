@@ -10,7 +10,16 @@ categories:
 
 <div class="notice">
 	
-	All the demos from the article are now unified in a single place, which also describes easier usage: <a href="http://ghinda.net/css-toggle-switch/">CSS Toggle Switches</a>.
+	<strong>Update December 2012: </strong>
+	
+	<p>
+		The latest version of the toggle switches have full mobile support and easy integration with <a href="http://ghinda.net/css-toggle-switch/bootstrap.html">Twitter Bootstrap</a> or <a href="http://ghinda.net/css-toggle-switch/foundation.html">ZURB Foundation</a>.
+	</p>
+
+	<p>
+		See the latest demos:
+		<a href="http://ghinda.net/css-toggle-switch/">CSS Toggle Switches</a>.
+	</p>
 	
 </div>
 

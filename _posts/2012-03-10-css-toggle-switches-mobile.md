@@ -8,9 +8,11 @@ categories:
 
 <div class="notice">
 
-	<strong>Update - October 2012: </strong>
+	<strong>Update October 2012: </strong>
 	
-	<p>After some testing it turns out that the Android 2.3 browser, and possibly other older Webkit browsers, are affected by this older <a href="http://css-tricks.com/webkit-sibling-bug/">WebKit Adjacent/General Sibling and Pseudo Class Bug</a>, which was causing issues with the toggle switches. </p>
+	<p>
+		After some testing it turns out that the Android 2.3 browser, and possibly other older Webkit browsers, are affected by this older <a href="http://css-tricks.com/webkit-sibling-bug/">WebKit Adjacent/General Sibling and Pseudo Class Bug</a>, which was causing issues with the toggle switches. 
+	</p>
 	
 	<p>The fix I added is based on the one described in the article above, but applied only to the containers, not the whole <code>body</code>, for performance reasons. </p>
 	
