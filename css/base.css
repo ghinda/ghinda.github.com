@@ -398,8 +398,8 @@ iframe {
 /* Code Highlighting */
 .highlight {
 	overflow: auto;
-	margin: 0px -40px;
-	padding: 0px 40px;
+	margin: 0px -20px;
+	padding: 0px 20px;
 	background-color: #DBDBDB;
 }
 .hll { background-color: #ffffcc }
@@ -531,6 +531,11 @@ iframe {
 		padding: 15px 40px;
 		margin: 0px -40px;
 		background-position: 10px 15px;
+	}
+	
+	.highlight {
+		margin: 0px -40px;
+		padding: 0px 40px;
 	}
 
 }
