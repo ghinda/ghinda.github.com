@@ -4,22 +4,14 @@ title: Projects
 ---
 
 <div class="notice">
-This page is pretty empty right now. I'm putting some of my work to rest, and switching hosting. More projects should show up here when I'm done.
+You can see <a href="https://github.com/ghinda">most of my projects on Github.</a>
 </div>
 
-[Acorn Media Player](http://ghinda.net/acornmediaplayer/)
----------------------------------------------------------
-Acorn Media Player is a HTML5 media player, with support for both `<audio>` and `<video>`, with a special focus on accessibility and customization. It's built as a jQuery plugin.
+* ## [Acorn Media Player](http://ghinda.net/acornmediaplayer/)
+Acorn Media Player is a HTML5 media player with a focus on accessibility and customization.
 
-Features:
----------
-* Closed-Captions
-* Dynamic transcript based on closed-captions
-* Easy customization and theming
-* Fullscreen (well Full-page is most browsers) support
-* Buffering indicator
-* Remembers volume level using HTML5 localStorage
-* Easy to use, understand and adapt
-* Free and Open Source
+* ## [CSS Toggle Switches](http://ghinda.net/css-toggle-switch/)
+Accessible, screen-reader friendly, flexible, CSS-only toggle switches with full keyboard access and mobile support, using standard form controls.
 
-Check out the [GitHub repo](https://github.com/ghinda/acornmediaplayer) and help out with the code, ask for features, or report issues.
+* ## [RightTasks for Gmail™ Chrome Extension](https://chrome.google.com/webstore/detail/righttasks-for-gmail/hgniockidojcaaolfcbbkaaakbjdebpe)
+Adds your Google Tasks to the right side in Gmail, like in Google Calendar.
