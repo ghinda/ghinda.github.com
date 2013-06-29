@@ -31,7 +31,7 @@ We must start with some meaningful markup, this will ensure our switches are acc
 
 The best way to mark up the multi-state switch is to use radio buttons. The first obvious advantage is that it supports an unlimited number of options, and is easily usable by keyboard alone.
 
-{% highlight html %}
+```html
 <fieldset>
 	<legend>View: </legend>
 	
@@ -43,7 +43,7 @@ The best way to mark up the multi-state switch is to use radio buttons. The firs
 	
 	<span></span>
 </fieldset>
-{% endhighlight %}
+```
 
 
 I use a `fieldset` to wrap the switch, along with a `legend` for the switch label, and the radio buttons with a label for each.
@@ -57,12 +57,12 @@ We need to hide the inputs, but we can't use `display: none`, because this will 
 
 To overcome these issues we hide them by moving them off screen. 
 
-{% highlight css %}
+```css
 fieldset input {
 	position: absolute;
 	top: -9999px;
 }
-{% endhighlight %}
+```
 
 NVDA will reach the `fieldset`, read the `legend`, and stop on the first input. Then we can use the up-down/left-right keys to switch between the `input`s.
 
@@ -76,7 +76,7 @@ There is a bug in most web browsers right now, except Firefox 4+, that prevents 
 
 We create the background slide rail with an `:after` pseudo-element on the `legend`.
 
-{% highlight css %}
+```css
 legend:after {
 	content: '';
 	
@@ -93,7 +93,7 @@ legend:after {
 	border-radius: 3px;
 	box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3), 0 1px 0px rgba(255, 255, 255, 0.2);
 }
-{% endhighlight %}
+```
 
 Then we position the labels next to each other, and create the look of the switch button. I won't go into to many details regarding the look of the switch, since you're all pretty familiar with CSS rounded corners, gradients and box-shadows.
 
@@ -101,11 +101,11 @@ Then we position the labels next to each other, and create the look of the switc
 
 This is where all the magic happens. We implement the full functionality of the switch only with CSS, by targeting the `span`, from the last `:checked` input, using the general sibling selector.
 
-{% highlight css %}
+```css
 fieldset input:last-of-type:checked ~ span {
 	left: 75%;
 }
-{% endhighlight %}
+```
 
 The switch is now fully functional, but we're lacking one important feature: a way to style the focused label, this is especially useful for users that are unable to use a mouse.
 
@@ -113,20 +113,20 @@ The switch is now fully functional, but we're lacking one important feature: a w
 
 To style the active label differently, we target the label following the checked input, using the adjacent sibling selector.
 
-{% highlight css %}
+```css
 fieldset input:checked + label {
 	color: #2d592a;
 	text-shadow: 0 1px 0 rgba(255,255,255,0.5);
 }
-{% endhighlight %}
+```
 
 We also need to provide a way to highlight the focused label, even if the associated input is not checked. We'll use the same technique we used for the checked item, but instead of using the `:checked` pseudo-class, we'll use `:focus`, and provide an outline for it.
 
-{% highlight css %}
+```css
 fieldset input:focus + label {
 	outline: 1px dotted #fff;
 }
-{% endhighlight %}
+```
 
 This benefits mostly Opera, since it's the only browser that allows you to reach each option using Tab, and select it by pressing the Enter or Space keys. Other browsers jump to the next fieldset when pressing Tab. 
 
@@ -142,13 +142,13 @@ Every browser, except Chrome, will also focus the label when clicking it. Chrome
 
 My next approach was using a checkbox, instead of radio input. This means we can simplify the markup a bit, since we don't have multiple input elements, like in the radio version. 
 
-{% highlight html %}
+```html
 <label>
 	View:
 	<input type="checkbox" />
 	<span></span>
 </label>
-{% endhighlight %}
+```
 
 Notice I'm not using the fieldset element any more, but just wrapping the input in a label, and again, than empty span.
 
@@ -156,13 +156,13 @@ Notice I'm not using the fieldset element any more, but just wrapping the input 
 
 We can only use the main text in the label, so we have to use generated content to create the "Week" and "Month" labels.
 
-{% highlight html %}
+```html
 <label data-on="Week" data-off="Month">
-{% endhighlight %}
+```
 
 To be able to easily reuse the toggle switch, you can see I'm using custom HTML5 attributes for these labels.
 
-{% highlight css %}
+```css
 label:after {
 	position: relative;
 	width: 50%;
@@ -173,7 +173,7 @@ label:after {
 	
 	column-count: 2;
 }
-{% endhighlight %}
+```
 
 In the content property, I use the attr() notation to get the value of the custom `data-` attributes, and separate them using the `\a` newline character. 
 
@@ -204,19 +204,19 @@ Since checkboxes should be used for on/off states, I'm using another one of Orma
 
 You'll notice I'm using a structure similar to the one used in the radio version, that allows for more flexibility in CSS.
 
-{% highlight html %}
+```html
 <fieldset>
 	<input id="wireless" type="checkbox" />
 	<label for="wireless">Wireless:</label>
 	<span></span>
 </fieldset>
-{% endhighlight %}
+```
 
 ### Behaviour
 
 When activated, the switch needs to move the toggle button and change the style of the rail. For this, I use the sibling selectors.
 
-{% highlight css %}
+```css
 /* Move the toggle button */
 input:focus ~ span {
 	right: 45px;
@@ -229,7 +229,7 @@ input:checked + label:after {
 
 	color: #60783f;
 }
-{% endhighlight %}
+```
 
 I've used the `label:after` pseudo-element to generate the rail, like in the radio version, and also included the On/Off text labels in it, since they're on the same depth. 
 

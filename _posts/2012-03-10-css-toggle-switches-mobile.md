@@ -57,7 +57,7 @@ But, it turns out that setting the `checked` property on the input with JavaScri
 
 The script I put together is pretty straight forward, except for a couple of things.
 
-{% highlight javascript %}
+```javascript
 /* Minimal Touch support test.
  * You should probably use Modernizr.
  */
@@ -126,14 +126,14 @@ if(touchSupport) {
 	};
 
 };
-{% endhighlight %}
+```
 
 I'm using the timeout because there seems to be a delay between taping the label, and the input actually getting checked. If we trigger the reflow too early, before the input is checked, it still won't change it's position. So we have to wait until the input is checked, before the reflow.
 
 The reflow is triggered using:
-{% highlight javascript %}
+```javascript
 document.body.className = document.body.className
-{% endhighlight %}
+```
 
 
 These solutions should also work on other "checkbox-hack" experiments.

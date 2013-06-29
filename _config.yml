@@ -1,6 +1,7 @@
 safe: true
 lsi: false
 pygments: true
+markdown: redcarpet
 permalink: /:title
 url: http://ghinda.net
 category_dir: tag
