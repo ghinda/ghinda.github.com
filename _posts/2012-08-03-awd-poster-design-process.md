@@ -27,7 +27,7 @@ It's always important to know your history, so, as a designer, it's mandatory to
 
 After some browsing around I came up with the following mood board.
 
-![I Love Adaptive Web Design Poster Mood board](/media/images/awd-poster-moodboard.png)
+![I Love Adaptive Web Design Poster Mood board]({{ site.url }}/media/images/awd-poster-moodboard.png)
 
 
 ## The Tower
@@ -38,7 +38,7 @@ I imagined the levels of experience as skin layers on an onion, but also as buil
 
 After some initial sketching, this is how the first version looked like.
 
-![First version of the I Love Adaptive Web Design Poster](/media/images/ghinda-iloveawdposter1-web.jpg)
+![First version of the I Love Adaptive Web Design Poster]({{ site.url }}/media/images/ghinda-iloveawdposter1-web.jpg)
 
 
 ## Final version
@@ -49,10 +49,10 @@ With this idea in mind, I started sketching and experimenting with including mor
 
 Ultimately, the idea came from one of [Ladislav Sutnar](http://www.aiga.org/medalist-ladislavsutnar/) catalog layouts. 
 
-![Second, final version of the I Love Adaptive Web Design Poster](/media/images/ghinda-iloveawdposter2-web.jpg)
+![Second, final version of the I Love Adaptive Web Design Poster]({{ site.url }}/media/images/ghinda-iloveawdposter2-web.jpg)
 
-You can find some great articles about design processes on [David Airey's website](http://www.davidairey.com/portfolio/) or on [Veerle Pieters's Blog](http://veerle.duoh.com).
+You can find some great articles about design processes on [David Airey's website](http://www.davidairey.com/portfolio/) or on [Veerle Pieters' Blog](http://veerle.duoh.com).
 
-**The full list of winners is available on [Veerle Pieters's blog](http://veerle.duoh.com/design/article/i_love_adaptive_web_design_poster_contest_winners).**
+**The full list of winners is available on [Veerle Pieters' blog](http://veerle.duoh.com/design/article/i_love_adaptive_web_design_poster_contest_winners).**
 
 Congrats to the winners, the entries were great!

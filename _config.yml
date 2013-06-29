@@ -1,6 +1,9 @@
-auto: true
-permalink: /:title
-category_dir: tag
+safe: true
+lsi: false
 pygments: true
+markdown: maruku
+permalink: /:title
+url: http://ghinda.net
+category_dir: tag
 exclude:
 - README

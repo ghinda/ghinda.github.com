@@ -45,7 +45,9 @@ The best way to mark up the multi-state switch is to use radio buttons. The firs
 </fieldset>
 {% endhighlight %}
 
+
 I use a `fieldset` to wrap the switch, along with a `legend` for the switch label, and the radio buttons with a label for each.
+
 
 ### Accessibility
 

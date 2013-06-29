@@ -7,28 +7,18 @@ layout: default
 </article>
 
 <footer role="contentinfo">
-	<time datetime="{{ page.date}}">{{ page.date | date_to_string }}</time>		
-	<section>
-		<h2>Filed under</h2>		
-		<ul class="posts">
-		{% for category in page.categories %}
-			<li>
-				<a href="/{{ site.category_dir }}/{{ category }}.html">{{ category }}</a>				
-			</li>
-		{% endfor %}
-		</ul>		
-	</section>
+	<time datetime="{{ page.date}}">{{ page.date | date_to_string }}</time>
 	
 	<section>
-		<h2>Related posts</h2>
-		<ul class="posts">
-		{% for post in site.related_posts limit:5 %}
+		<h2>Latest articles</h2>
+		<ul>		
+		{% for post in site.posts limit:5 %}
 			<li>
 				<a href="{{ post.url }}">{{ post.title }}</a>
-				<time datetime="{{ post.date}}">{{ post.date | date_to_string }}</time>
+				<time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time>
 			</li>
 		{% endfor %}
-		</ul>		
+		</ul>
 	</section>
 		
 </footer>
