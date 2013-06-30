@@ -20,10 +20,6 @@ layout: nil
 		<link type="text/html" rel="alternate" href="http://ghinda.net{{ post.url }}"/>
 		<title>{{ post.title }}</title>
 		<updated>{{ post.date | date_to_xmlschema }}</updated>
-		<author>
-			<name>Ionut Colceriu</name>
-			<uri>http://ghinda.net/</uri>
-		</author>
 		<content type="html">{{ post.content | xml_escape }}</content>
 	</entry>
 	{% endfor %}
