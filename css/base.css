@@ -87,7 +87,7 @@ article img {
 */
 a[href*="mailto:"]:hover, a[href*="mailto:"]:focus {background: url("data:image/png;base64,\iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAAG7AAABuwE67OPiAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAF1QTFRF////AAAAAAAAAAAAs8vnvdLrwNLrwNTrydruy9vt0N/x0d7u0uDx1ODu1uLy3Of03uj15u335+zz5+726fD36fD47fH37vP59ff89fj89vj8+fn5/f3+/v7+////hpPEbwAAAAR0Uk5TABtOUkh/eFgAAABrSURBVHjahc7bEkAgFIXhCOUUG5UU7/+Y1mCGpgvf1d7/1WL/sjySMX5EOOONe1/XIEgxhPsNg5AISnWVPkBXnVIII4jCuUKMgEBEdUtlSW2NE8Eu/Wwvc79YBDOt22OdDILfPzxPhqXTf53FSgzdFGhRWQAAAABJRU5ErkJggg==") no-repeat;}
 
-a[href*="feedburner.com"]:hover, a[href*="feedburner.com"]:focus {
+a[href*="/feed/"]:hover, a[href*="/feed/"]:focus {
 background: url("data:image/png;base64,\iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAABuwAAAbsBOuzj4gAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAHHSURBVHjapZO9axRBGMZ/s7P3BRdyiYEI4gcqiEIsrJIIgcNOUfFf8G+wsrOxSGshio2xFgTBIhIsQgQj2CRRMQEViRfDGZM79+72Y3Z84Za9KVIY8sKPeWeY53mfHVhlreUw5QuEC7OLfu/XFKancUoJ7HNgddHElWNvy/U7Mz6AaixP6dOXNfxvGqVtY206T6BaPzThHgcplXR1bmBNBFGbg5S1hoFBkkDY2meMqwC3UpMZ5G5xFyoj0NkBzwgIroIMBYUqmG5u0I9frsHVB2Ai+LMOn+fg9wpoDcqHJICe0P0LW1/kmuck6OzCh8ciegpHL8C5mzB5Dz49hJVZCLbAALEQkaUbchJ4CsbPw/VHsCfTV0X08zlcW4LtV9KLQeJ8khVSDfmRlsW0JMEzqIzCrWUopLK/D5eEMlASChk+WE8NDFKloP1dmhAWb0PjNUzcheYLGL4IFR+KmVj3sZ7nJBADaqfgyhM4eQM2X0L1DIQb4JWkP96/qTIA5TmPmJSGYPcbzJ2FSNYxEbTeQ5zAuzoEm5ACNgOIdXFg0AyKb9LqibputrHqCDboyIQOqBHU149ALXu4PsYW2NkO54eBQ//O/wDnxaqIYaXVkwAAAABJRU5ErkJggg==") no-repeat 0 center;}
 
 a[href*="yahoo."]:hover, a[href*="yahoo."]:focus {background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAllBMVEX////38vf38ffp1+nn1+fk1eTWtNbVstXTsNPRrtHMnszKm8rJm8m8i7y0eLSpd6m9Yb2zWLOhVKGqTqqhSKGRTpGfQ5+dQp2WP5aYPZiUN5SDPIOLNouOM46PMo+HMoeLMIuAMoCLLIuGJ4Z5KXl2J3aCIYJ9HH17FntzGXN5Fnl5FXl4Fnh0EXRpFmlvC29EAET///+dVEUVAAAAMnRSTlP///////////////////////////////////////////////////////////////+/AP0p1+oAAACGSURBVBgZVcHbAoFAFAXQLblFSISRKaXSRfb8/8859dSsBUOLAY8WgsF5IiAYxm8RX0chwciD8O5JURRJRFAptcThqXYAtoqg1vo2n13Sl7vSWhPMxMlZPNx1Jgjmgz2cTT4gWI6AckSwEnUP9HUlCHbCh/A7QbD5TjQE299ES/BjIQwt5g+tfSDKtM04aAAAAABJRU5ErkJggg==") no-repeat;}
@@ -111,7 +111,7 @@ a[href*="wikipedia."]:hover, a[href*="wikipedia."]:focus,
 a[href*="identi.ca"]:hover, a[href*="identi.ca"]:focus,
 a[href*="facebook."]:hover, a[href*="facebook."]:focus, 
 a[href*="yahoo."]:hover, a[href*="yahoo."]:focus, 
-a[href*="feedburner.com"]:hover, a[href*="feedburner.com"]:focus, 
+a[href*="/feed/"]:hover, a[href*="/feed/"]:focus, 
 a[href*="mailto:"]:hover, a[href*="mailto:"]:focus {
 	margin-left: -20px; 
 	padding-left: 20px;
