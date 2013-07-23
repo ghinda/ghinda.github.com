@@ -1,6 +1,5 @@
 ---
 title: Google Tasks sidebar in Gmail
-published: true
 layout: post
 ---
 
