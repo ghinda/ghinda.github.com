@@ -6,7 +6,7 @@ categories:
 - code
 ---
 
-Having to upload a JPEG image as a raw Blob on Android 4.0+ revealed a couple of bugs. 
+Having to upload a JPEG image as a raw Blob on Android 4.0+ revealed a couple of bugs.
 
 If you have direct access to the specific JPEG image, when the image is on the same domain as the rest of your app, or you are in an environment without cross-origin restrictions, such as a PhoneGap webview, you can use the XHR2 `responseType` property to specify the format of the returned data.
 
@@ -22,13 +22,13 @@ imageXhr.responseType = 'blob';
 
 If you have to get the image data from a `canvas`, you should be able to get the dataURL, write it to an `ArrayBuffer` and then write it to a Blob. In the near future we'll be able to use the [`toBlob()` method](https://developer.mozilla.org/en-US/docs/DOM/HTMLCanvasElement#Methods), which will return the image data as a Blob. Right now, to be "future friendly", we can detect support for `toBlob()` and use Sebastian Tschan's [canvas.toBlob() polyfill](https://github.com/blueimp/JavaScript-Canvas-to-Blob) if there's no native support for it.
 
-Unfortunately, if you need the image data as a JPEG you'll hit an Android bug. 
+Unfortunately, if you need the image data as a JPEG you'll hit an Android bug.
 
-The `toDataURL` method allows you to specify the type of the returned `data:`, so you should be able to specify the 'image/jpeg' type, and get a JPEG image. While this works on most desktop browsers, Android always returns the image as a PNG. 
+The `toDataURL` method allows you to specify the type of the returned `data:`, so you should be able to specify the 'image/jpeg' type, and get a JPEG image. While this works on most desktop browsers, Android always returns the image as a PNG.
 
-Here's a simple [test for the `canvas.toDataURL('image/jpeg')` method](http://jsfiddle.net/ghinda/na86m/), demonstrating the bug. While this will work on desktop browsers, testing it on Android 3+ will always return `image/png`. 
+Here's a simple [test for the `canvas.toDataURL('image/jpeg')` method](http://jsfiddle.net/ghinda/na86m/), demonstrating the bug. While this will work on desktop browsers, testing it on Android 3+ will always return `image/png`.
 
-The only work-around is to use a [JavaScript JPEG Encoder](http://www.bytestrom.eu/blog/2009/1120a_jpeg_encoder_for_javascript), and encode the raw image data yourself.
+The only work-around is to use a [JavaScript JPEG Encoder](http://web.archive.org/web/20120830003356/http://www.bytestrom.eu/blog/2009/1120a_jpeg_encoder_for_javascript), and encode the raw image data yourself.
 
 ```javascript
 var encoder = new JPEGEncoder();
@@ -40,11 +40,11 @@ You can now convert the image data to a Blob.
 
 ## Blobs
 
-Android introduced [support for Blobs](http://caniuse.com/#feat=blobbuilder) in 3.0, using the now deprecated `BlobBuilder` interface, and has kept it the same up to the latest version (4.2 as of November 2012). 
+Android introduced [support for Blobs](http://caniuse.com/#feat=blobbuilder) in 3.0, using the now deprecated `BlobBuilder` interface, and has kept it the same up to the latest version (4.2 as of November 2012).
 
-According to [chromestatus.com](https://sites.google.com/a/chromium.org/dev/developers/web-platform-status), Chrome for Android also has support only for the `BlobBuilder` interface right now.  
+According to [chromestatus.com](https://sites.google.com/a/chromium.org/dev/developers/web-platform-status), Chrome for Android also has support only for the `BlobBuilder` interface right now.
 
-This isn't really a problem, since we can check support for `BlobBuilder`, and create the Blob using the supported interface. 
+This isn't really a problem, since we can check support for `BlobBuilder`, and create the Blob using the supported interface.
 
 The `canvas.toBlob` polyfill adds an additional function called [`dataURLtoBlob`](https://github.com/blueimp/JavaScript-Canvas-to-Blob#api), which can convert a data url to a Blob. We can use this method on the manually-encoded JPEG image data.
 
@@ -62,7 +62,7 @@ xhr.send(blob);
 
 While the request works as expected on supporting desktop browsers, there seems to be a bug in Android that sends the request completely empty. Here's a [test for `xhr.send(blob)` using GitHub's API](http://jsfiddle.net/ghinda/fRgbf/), which sends both a Blob and an ArrayBuffer.
 
-On supporting desktop browsers, you'll get the proper response from the API, while on Android you'll get an error for the Blob-based request, because the API request doesn't send the required parameters, sending the request without any payload. 
+On supporting desktop browsers, you'll get the proper response from the API, while on Android you'll get an error for the Blob-based request, because the API request doesn't send the required parameters, sending the request without any payload.
 
 Weirdly, the work-around is to send an `ArrayBuffer`, instead of a Blob, which will have the exact same effect. You can convert a Blob to an `ArrayBuffer` using the `FileReader` object. Check the `str2ab_blobreader` function in the example above to see how you use it exactly.
 
