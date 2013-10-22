@@ -1,58 +1,52 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <head>
-	<meta charset="utf-8" />  
-	<title>{{ page.title }} &#8212; Ghinda</title>	
-	<meta name="description" content="Ionuț Colceriu's blog about web development, standards, HTML5, CSS3, JavaScript, and accessibility.">
+	<meta charset="utf-8" />
+	<title>{{ page.title }} &#8212; Ghinda</title>
+	<meta name="description" content="Ionuț Colceriu on web development, design, HTML5, CSS3, JavaScript, accessibility.">
 	<link rel="alternate" type="application/atom+xml" href="/feed/index.xml" />
-	<link rel="stylesheet" type="text/css" href="/css/base.css" />	
+	<link rel="stylesheet" type="text/css" href="/css/main.css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
 
-<header role="banner">
-	<h1><a href="/" title="Ghinda Home"><img src="/images/ghinda-logo.png" width="149" height="42" alt="Ghinda - Ionut Colceriu, designer and web worker logo" /></a></h1>
-    <p>Hi, I'm Ionuț Colceriu, designer and web worker</p>
-	<nav>
-		<ul>
-			<li><a href="/about.html">About</a></li>
-			<li><a href="/archive.html">Articles</a></li>
-			<li><a href="/projects.html">Projects</a></li>
-			<li><a href="http://codecanyon.net/user/ghinda?ref=ghinda" target="envato">Marketplace</a></li>      
-		</ul>
-	</nav>
-	
-	<section>
-		<form action="http://www.google.com/cse" id="cse-search-box">		  
-			<input type="hidden" name="cx" value="006605491522212473529:oynz7tc5stm" />
-			<input type="hidden" name="ie" value="UTF-8" />
-			<input type="search" name="q" size="31" placeholder="Search..."/>		  
-		</form>		
-	</section>
-	
-	<section class="contact-details">
-		<p>
-			<a href="mailto:contact@ghinda.net">contact@ghinda.net</a> <br />
-			<a href="/feed/" rel="external">rss</a> &#8226;
-			<a href="https://github.com/ghinda" rel="external">github</a> &#8226;
-			<a href="http://twitter.com/ghindas/" rel="external">twitter</a>
-		</p>
-	</section>
-	
-</header>
+	<header role="banner">
+		<div class="row">
+			<h1>
+				<a href="/" title="Ghinda Home">
+					<img src="/images/ghinda-logo.png" width="149" height="42" alt="Ghinda - Ionut Colceriu, designer and web worker logo" />
+				</a>
+			</h1>
+			<p>Hi, I'm Ionuț Colceriu, designer and web worker</p>
+			<nav>
+				<ul class="inline-list">
+					<li><a href="/about.html">About</a></li>
+					<li><a href="/archive.html">Articles</a></li>
+					<li><a href="/projects.html">Projects</a></li>
+					<li><a href="http://codecanyon.net/user/ghinda?ref=ghinda" target="envato">Marketplace</a></li>
+				</ul>
+			</nav>
+		</div>
 
-<article id="content">
+	</header>
+
 	{{ content }}
 
-	<div class="site-footer">
-		<p>	
-			<a href="#content">Back to top &uarr;</a> <br />			
-			<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Content under a Creative Commons license.</a>
-		</p>
-		<p>
-			<a href="mailto:contact@ghinda.net">contact@ghinda.net</a>
-		</p>
-	</div>
-</article>
+	<footer>
+
+		<div class="row">
+
+			<section class="contact-details">
+				<p>
+					<a href="mailto:contact@ghinda.net">contact@ghinda.net</a> <br />
+					<a href="/feed/" rel="external">rss</a> &#8226;
+					<a href="https://github.com/ghinda" rel="external">github</a> &#8226;
+					<a href="http://twitter.com/ghindas/" rel="external">twitter</a>
+				</p>
+			</section>
+
+		</div>
+
+	</footer>
 
 	<script>
 		var _gaq = [['_setAccount', 'UA-19824700-1'], ['_trackPageview']];

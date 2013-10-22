@@ -1,24 +1,9 @@
 ---
 layout: default
 ---
-<article>
+
+<article class="row">
 	<h1>{{ page.title }}</h1>
 	{{ content }}
 </article>
 
-<footer role="contentinfo">
-	<time datetime="{{ page.date}}">{{ page.date | date_to_string }}</time>
-	
-	<section>
-		<h2>Latest articles</h2>
-		<ul>		
-		{% for post in site.posts limit:5 %}
-			<li>
-				<a href="{{ post.url }}">{{ post.title }}</a>
-				<time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time>
-			</li>
-		{% endfor %}
-		</ul>
-	</section>
-		
-</footer>

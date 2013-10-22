@@ -2,19 +2,17 @@
 title: I love Adaptive Web Design poster design process
 published: true
 layout: post
-categories:
-- design
 ---
 
-In February, [Veerle Pieters](http://veerle.duoh.com) partnered with [Easy Readers](http://easy-readers.net) and launched the [I Love Adaptive Web Design Poster Contest](http://veerle.duoh.com/design/article/i_love_adaptive_web_design_poster_contest). Since I was lucky enough to be among the winners, I thought it would be a great idea to give some insight on how the poster came together, and what's the idea behind it. 
+In February, [Veerle Pieters](http://veerle.duoh.com) partnered with [Easy Readers](http://easy-readers.net) and launched the [I Love Adaptive Web Design Poster Contest](http://veerle.duoh.com/design/article/i_love_adaptive_web_design_poster_contest). Since I was lucky enough to be among the winners, I thought it would be a great idea to give some insight on how the poster came together, and what's the idea behind it.
 
 There is just not enough information online about the complete design process. Sure, there are a lot of tutorials, articles and notes about specific tools or techniques, but design is much more than that, crossing tools and mediums.
 
 ## Concept
 
-The basic requirement for the contest was to *design a poster celebrating your passion for adaptive web design*, as stated in the original briefing, so there was plenty of creative freedom. 
+The basic requirement for the contest was to *design a poster celebrating your passion for adaptive web design*, as stated in the original briefing, so there was plenty of creative freedom.
 
-Veerle Pieters provided the sources for the cover she had designed for Aaron Gustafson's book, along with the [design process for the cover](http://veerle.duoh.com/design/article/adaptive_web_design_book_cover) available on her blog, which provided a great starting point for me. 
+Veerle Pieters provided the sources for the cover she had designed for Aaron Gustafson's book, along with the [design process for the cover](http://veerle.duoh.com/design/article/adaptive_web_design_book_cover) available on her blog, which provided a great starting point for me.
 
 Since *adaptive web design* is such a broad term, I tried not to use actual devices, screen sizes, or the such, even if those were my initial thoughts. But, even if I didn't want exact metrics, I still wanted to present the concept in clear way that was easy to understand.
 
@@ -45,9 +43,9 @@ After some initial sketching, this is how the first version looked like.
 
 While I was pretty happy with the first version of the poster, it still wasn't as clear as would've liked it to be. The basic idea was to be able to show the poster to somebody who was unfamiliar with the concept, and they could easily understand it.
 
-With this idea in mind, I started sketching and experimenting with including more text, without complicating the overall look of the poster. 
+With this idea in mind, I started sketching and experimenting with including more text, without complicating the overall look of the poster.
 
-Ultimately, the idea came from one of [Ladislav Sutnar](http://www.aiga.org/medalist-ladislavsutnar/) catalog layouts. 
+Ultimately, the idea came from one of [Ladislav Sutnar](http://www.aiga.org/medalist-ladislavsutnar/) catalog layouts.
 
 ![Second, final version of the I Love Adaptive Web Design Poster]({{ site.url }}/media/images/ghinda-iloveawdposter2-web.jpg)
 

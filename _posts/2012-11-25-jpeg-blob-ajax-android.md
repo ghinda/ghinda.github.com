@@ -1,9 +1,6 @@
 ---
 title: Send a JPEG Blob with AJAX on Android
-published: true
 layout: post
-categories:
-- code
 ---
 
 Having to upload a JPEG image as a raw Blob on Android 4.0+ revealed a couple of bugs.
