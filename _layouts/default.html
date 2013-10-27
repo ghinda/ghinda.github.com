@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <head>
 	<meta charset="utf-8" />
-	<title>{{ page.title }} &#8212; Ghinda: web work by Ionuț Colceriu</title>
+	<title>
+		{% if page.title == 'Home' %}
+			Ghinda &#8212; web work by Ionuț Colceriu
+		{% else %}
+			{{ page.title }} &#8212; Ionuț Colceriu
+		{% endif %}
+	</title>
 	<meta name="description" content="Ionuț Colceriu on web development, design, HTML5, CSS3, JavaScript, accessibility.">
 	<link rel="alternate" type="application/atom+xml" href="/feed/index.xml" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="/css/main.css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body class="{{ page.theme }}">
 
 	<header role="banner" class="row">
+
 		<div class="large-6 columns">
 			<h1>
-				<a href="/" title="Home">
-					<img src="/images/ghinda-logo.png" width="149" height="42" alt="" />
+				<a href="/" title="Home" class="brand">
+					<img src="/images/ghinda-logo.svg" alt="" />
 					Ionuț Colceriu
 				</a>
 			</h1>
 		</div>
-		<div class="large-4 columns">
-			<nav>
+		<div class="large-6 columns">
+			<nav class="right">
 				<ul class="inline-list">
 					<li><a href="/about.html">About</a></li>
 					<li><a href="/projects.html">Projects</a></li>
@@ -27,6 +35,7 @@
 			</nav>
 		</div>
 
+		<div class="hover-bubble"></div>
 	</header>
 
 	{{ content }}
