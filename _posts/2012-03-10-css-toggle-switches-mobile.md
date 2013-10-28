@@ -3,23 +3,19 @@ title: Mobile support for the CSS toggle switches
 layout: post
 ---
 
-<div class="notice">
+*Update October 2012:*
 
-	<strong>Update October 2012: </strong>
+After some testing it turns out that the Android 2.3 browser, and possibly other older Webkit browsers, are affected by this older [WebKit Adjacent/General Sibling and Pseudo Class Bug](http://css-tricks.com/webkit-sibling-bug/), which was causing issues with the toggle switches.
 
-	<p>
-		After some testing it turns out that the Android 2.3 browser, and possibly other older Webkit browsers, are affected by this older <a href="http://css-tricks.com/webkit-sibling-bug/">WebKit Adjacent/General Sibling and Pseudo Class Bug</a>, which was causing issues with the toggle switches.
-	</p>
+The fix I added is based on the one described in the article above, but applied only to the containers, not the whole `body`, for performance reasons.
 
-	<p>The fix I added is based on the one described in the article above, but applied only to the containers, not the whole <code>body</code>, for performance reasons. </p>
+Another issue was that, [on older iOS versions the `input` was not selected, when tapping the label](http://stackoverflow.com/questions/7358781/tapping-on-label-in-mobile-safari). The work-around for this was to add an empty `onclick` handler. This handler also makes Opera Mini re-render the page, with the right input selected.
 
-	<p>Another issue was that, <a href="http://stackoverflow.com/questions/7358781/tapping-on-label-in-mobile-safari">on older iOS versions the <code>input</code> was not selected, when tapping the label</a>. The work-around for this was to add an empty <code>onclick</code> handler. This handler also makes Opera Mini re-render the page, with the proper input selected. </p>
+These changes completely remove the need for the JavaScript functionality that was previously adding mobile support.
 
-	<p>These changes completly remove the need for the JavaScript functionality that was previously adding mobile support. </p>
+**Latest demos: [CSS Toggle Switch](/css-toggle-switch/).**
 
-	<p><strong>Latest demos: <a href="/css-toggle-switch/">CSS Toggle Switches</a>.</strong></p>
-
-</div>
+***
 
 While testing the [CSS toggle switches](/css-toggle-switches) from my last article, I noticed they had issues, or didn't work at all, in various mobile browsers. The only mobile browsers which seemed to properly support the switches were Firefox Mobile and Opera Mobile.
 
@@ -27,7 +23,7 @@ For both the radio and checkbox-based versions, the switches looked alright but 
 
 The only version that worked properly was the one where the checkbox input was placed inside the label.
 
-After some digging, I ended up at [The Ninja's website](http://www.thecssninja.com/css/custom-inputs-using-css), who also had similar problems with his custom radio and checkbox inputs. His latest solution to the iOS issue was to make sure the input is topmost, and set it's `opacity` to zero.
+After some digging, I ended up on [The CSS Ninja](http://www.thecssninja.com/css/custom-inputs-using-css), who also had similar problems with custom radio and checkbox inputs. His latest solution to the iOS issue was to make sure the input is topmost, and set it's `opacity` to zero.
 
 When applying this technique on the basic checkbox-based example, after taping the switch, the background, border, and text colors where changing, but the position of the button wasn't.
 
@@ -128,6 +124,7 @@ if(touchSupport) {
 I'm using the timeout because there seems to be a delay between taping the label, and the input actually getting checked. If we trigger the reflow too early, before the input is checked, it still won't change it's position. So we have to wait until the input is checked, before the reflow.
 
 The reflow is triggered using:
+
 ```javascript
 document.body.className = document.body.className
 ```

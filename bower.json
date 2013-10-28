@@ -2,10 +2,8 @@
 	"name": "ghinda.net",
 	"version": "0.0.0",
 	"dependencies": {
-		"foundation": "4.x",
-		"font-awesome": "~3",
-		"bourbon": "~3",
-		"modernizr": "~2"
+		"foundation": "~4",
+		"bourbon": "~3"
 	},
 	"devDependencies": {
 	}
