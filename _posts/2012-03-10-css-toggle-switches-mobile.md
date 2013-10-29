@@ -13,7 +13,7 @@ Another issue was that, [on older iOS versions the `input` was not selected, whe
 
 These changes completely remove the need for the JavaScript functionality that was previously adding mobile support.
 
-**Latest demos: [CSS Toggle Switch](/css-toggle-switch/).**
+Latest demos: [CSS Toggle Switch](http://ghinda.net/css-toggle-switch/).
 
 ***
 
@@ -43,7 +43,7 @@ That's why, to get mobile support, you have to force a reflow when toggling the 
 
 Since Opera Mini is one of the most used mobile browsers, supporting it is big plus. And, even though it's a proxy browser, it does have some support for JavaScript. Still, using the same technique to trigger a reflow as on the other mobile browsers, isn't working.
 
-But, it turns out that setting the `checked` property on the input with JavaScript, does trigger a sort-of-reflow. It will reload the page, with the new option selected. It's probably the best solution we can get for Opera Mini, since it doen't have any "real" interactions on the page.
+But, it turns out that setting the `checked` property on the input with JavaScript, does trigger a sort-of-reflow. It will reload the page, with the new option selected. It's probably the best solution we can get for Opera Mini, since it doen't have any &ldquo;real&rdquo; interactions on the page.
 
 
 ## The Script
@@ -129,7 +129,6 @@ The reflow is triggered using:
 document.body.className = document.body.className
 ```
 
-
-These solutions should also work on other "checkbox-hack" experiments.
+These solutions should also work on other &ldquo;checkbox-hack&rdquo; experiments.
 
 The demos are on Github: [css-toggle-switch](https://github.com/ghinda/css-toggle-switch).

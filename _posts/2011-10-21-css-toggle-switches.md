@@ -4,20 +4,13 @@ published: true
 layout: post
 ---
 
-<div class="notice">
+*Update December 2012:*
 
-	<strong>Update December 2012: </strong>
+The latest version of the toggle switch has full mobile support and easy integration with [Twitter Bootstrap](http://ghinda.net/css-toggle-switch/bootstrap.html) or [ZURB Foundation](http://ghinda.net/css-toggle-switch/foundation.html).
 
-	<p>
-		The latest version of the toggle switches have full mobile support and easy integration with <a href="http://ghinda.net/css-toggle-switch/bootstrap.html">Twitter Bootstrap</a> or <a href="http://ghinda.net/css-toggle-switch/foundation.html">ZURB Foundation</a>.
-	</p>
+See the latest demos: [CSS Toggle Switch](http://ghinda.net/css-toggle-switch/).
 
-	<p>
-		See the latest demos:
-		<a href="http://ghinda.net/css-toggle-switch/">CSS Toggle Switches</a>.
-	</p>
-
-</div>
+***
 
 Back in August I saw [Orman Clark](http://www.premiumpixels.com)'s latest work at the time, a [set of beautiful toggle switches](http://www.premiumpixels.com/freebies/sort-switches-toggles-psd/), and decided I'd have a go at creating a functional version of them.
 
@@ -41,9 +34,7 @@ The best way to mark up the multi-state switch is to use radio buttons. The firs
 </fieldset>
 ```
 
-
 I use a `fieldset` to wrap the switch, along with a `legend` for the switch label, and the radio buttons with a label for each.
-
 
 ### Accessibility
 
@@ -63,7 +54,7 @@ fieldset input {
 NVDA will reach the `fieldset`, read the `legend`, and stop on the first input. Then we can use the up-down/left-right keys to switch between the `input`s.
 
 ### Switch button
-"So what that's empty `span`?", you might ask.
+&ldquo;So what that's empty `span`?&rdquo;, you might ask.
 While I'm not really a fan of empty elements used only for styling purposes, we're forced to use an actual element, rather than a pseudo-element, if we want to be able to use transitions on the switch.
 
 There is a bug in most web browsers right now, except Firefox 4+, that prevents CSS3 animation and transitions on pseudo-elements. More about [Transitions and Animations on CSS Generated Content](http://css-tricks.com/13555-transitions-and-animations-on-css-generated-content/).
@@ -128,13 +119,9 @@ This benefits mostly Opera, since it's the only browser that allows you to reach
 
 Every browser, except Chrome, will also focus the label when clicking it. Chrome will only focus it when reached by keyboard.
 
-<a href="http://ghinda.net/css-toggle-switch#radio" class="demo-button">View Demo</a>
-
 ## Checkbox
 
-<div class="warning">
-	<p>This approach has been removed from the latest version of the toggle switches, because of accessibility issues. </p>
-</div>
+*Update: This approach has been removed from the latest version of the toggle switches, because of accessibility issues.*
 
 My next approach was using a checkbox, instead of radio input. This means we can simplify the markup a bit, since we don't have multiple input elements, like in the radio version.
 
@@ -150,7 +137,7 @@ Notice I'm not using the fieldset element any more, but just wrapping the input 
 
 ### On/Off Labels
 
-We can only use the main text in the label, so we have to use generated content to create the "Week" and "Month" labels.
+We can only use the main text in the label, so we have to use generated content to create the &ldquo;Week&rdquo; and &ldquo;Month&rdquo; labels.
 
 ```html
 <label data-on="Week" data-off="Month">
@@ -177,12 +164,12 @@ I'm doing that to be able to properly position them. The problem is that, becaus
 
 So, in order to properly position them I use the CSS3 column-count property to split the `:after` element into two columns, and center each label in each of these columns.
 
-That's where the `\a` character comes in. Using it, I'm pushing the "off" label to next line, and since it's a single line, the next column.
+That's where the `\a` character comes in. Using it, I'm pushing the &ldquo;Off&rdquo; label to next line, and since it's a single line, the next column.
 
 ### Accessibility
 
-NVDA will read the label as "View, checkbox, not checked, Week Month". But this is only because the latest version of NVDA(2011.2 right now) also reads generated content.
-Other screen readers, and especially older versions, don't read generated content *at all*. So the "Week" and "Month" labels won't be available to screen reader users.
+NVDA will read the label as &ldquo;View, checkbox, not checked, Week Month&rdquo;. But this is only because the latest version of NVDA(2011.2 right now) also reads generated content.
+Other screen readers, and especially older versions, don't read generated content *at all*. So the &ldquo;Week&rdquo; and &ldquo;Month&rdquo; labels won't be available to screen reader users.
 
 This is one of the main downsides of this approach.
 
@@ -231,16 +218,14 @@ I've used the `label:after` pseudo-element to generate the rail, like in the rad
 
 ### Accessibility
 
-NVDA will read the switch as "Checkbox, not checked. Wireless. Off, On". Once reached, it can be controlled (checked/unchecked) using the Space or Enter key.
+NVDA will read the switch as &ldquo;Checkbox, not checked. Wireless. Off, On&rdquo;. Once reached, it can be controlled (checked/unchecked) using the Space or Enter key.
 
-Even if you're using a screen-reader that doesn't read generated content, the switch still makes sense, because it will read the checkbox as "checked" or "unchecked".
+Even if you're using a screen-reader that doesn't read generated content, the switch still makes sense, because it will read the checkbox as &ldquo;checked&rdquo; or &ldquo;unchecked&rdquo;.
 
 It's usable, but it would be ideal if we could place the label before the input, so that the screen-reader will read it before reaching the checkbox.
 But we can't change the order of the elements, since we need to reach the `label` and `span` elements using the `+` and '~' sibling selectors.
 
 Still, it's not an absolute must, since many form layouts place the checkbox before the label, and people are probably used to it.
-
-<a href="http://ghinda.net/css-toggle-switch#checkbox" class="demo-button">View Demo</a>
 
 ## Internet Explorer
 
@@ -261,11 +246,6 @@ The switches look right in all the browsers, but the toggle buttons don't move w
 <del>I'm working on a solution for this, and will follow-up with a new post addressing mobile support for the switches. </del>
 </p>
 
-<div class="notice">
+*Update: I've added mobile support for the toggle switches, describing the development process in a new article: [Mobile support for the CSS toggle switches](/css-toggle-switches-mobile).*
 
-	I've added mobile support for the toggle switches, describing the development process in a new article: <a href="/css-toggle-switches-mobile">Mobile support for the CSS toggle switches</a>.
-
-</div>
-
-*Any ideas?* You can contribute to the [css-toggle-switch GitHub repository](https://github.com/ghinda/css-toggle-switch) from which the demos are loaded.
-As usual, any feedback is appreciated.
+*Any ideas?* You can contribute to the [css-toggle-switch GitHub repository](https://github.com/ghinda/css-toggle-switch).

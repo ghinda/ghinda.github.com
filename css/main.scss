@@ -17,6 +17,7 @@ $black: #333;
  */
 $primary-color: $color1;
 $button-border-width: 0px;
+$small-screen: 430px;
 
 @import '../bower_components/foundation/scss/foundation';
 @import 'ie8-grid-foundation-4';
@@ -47,8 +48,6 @@ $button-border-width: 0px;
 
 body {
 	padding-top: emCalc(60);
-
-	font-family: 'Open Sans', sans-serif;
 }
 
 h1,
@@ -57,8 +56,17 @@ h3,
 h4,
 h5 {
 	font-weight: 600;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5 {
 	font-family: 'Open Sans', sans-serif;
 }
+
 
 h1 {
 	font-size: emCalc(32);
@@ -99,7 +107,20 @@ header {
 		position: relative;
 		z-index: 2;
 		vertical-align: baseline;
+
+		text-align: center;
+
+		@include breakpoint(papa-bear) {
+			text-align: left;
+		}
+
+		&:last-child {
+			@include breakpoint(papa-bear) {
+				text-align: right;
+			}
+		}
 	}
+
 
 	h1 {
 		margin: 0;
@@ -118,9 +139,13 @@ header {
 		}
 	}
 
+	nav {
+		display: inline-block;
+	}
+
 	.inline-list {
 		margin: 0;
-		padding-top: emCalc(20);
+		padding-top: emCalc(16);
 
 		a {
 			color: $black;
@@ -136,16 +161,22 @@ header {
 
 	.hover-bubble {
 		position: absolute;
-		left: 0;
+		left: 50%;
 		top: 0;
 		z-index: 1;
 		display: block;
 		width: emCalc(64);
 		height: emCalc(64);
 		margin-top: emCalc(-8);
+		margin-left: emCalc(-128);
 		background-color: $color1;
 
 		border-radius: 50%;
+
+		@include breakpoint(papa-bear) {
+			left: 0;
+			margin-left: 0;
+		}
 	}
 
 }

@@ -51,6 +51,6 @@ Ultimately, the idea came from one of [Ladislav Sutnar](http://www.aiga.org/meda
 
 You can find some great articles about design processes on [David Airey's website](http://www.davidairey.com/portfolio/) or on [Veerle Pieters' Blog](http://veerle.duoh.com).
 
-**The full list of winners is available on [Veerle Pieters' blog](http://veerle.duoh.com/design/article/i_love_adaptive_web_design_poster_contest_winners).**
+*The full list of winners is available on [Veerle Pieters' blog](http://veerle.duoh.com/design/article/i_love_adaptive_web_design_poster_contest_winners).*
 
 Congrats to the winners, the entries were great!
