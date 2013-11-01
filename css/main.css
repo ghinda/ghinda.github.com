@@ -4960,10 +4960,10 @@ header {
     z-index: 2;
     vertical-align: baseline;
     text-align: center; }
-    @media (min-width: 430px) {
+    @media (min-width: 26.875em) {
       header .columns {
         text-align: left; } }
-    @media (min-width: 430px) {
+    @media (min-width: 26.875em) {
       header .columns:last-child {
         text-align: right; } }
   header h1 {
@@ -5000,7 +5000,7 @@ header {
     margin-left: -8em;
     background-color: #ad3c00;
     border-radius: 50%; }
-    @media (min-width: 430px) {
+    @media (min-width: 26.875em) {
       header .hover-bubble {
         left: 0;
         margin-left: 0; } }
