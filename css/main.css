@@ -4956,8 +4956,7 @@ header {
   position: relative;
   padding-bottom: 3.75em; }
   header .columns {
-    position: relative;
-    z-index: 2;
+    position: static;
     vertical-align: baseline;
     text-align: center; }
     @media (min-width: 26.875em) {
@@ -4982,12 +4981,17 @@ header {
     margin: 0;
     padding-top: 1em; }
     header .inline-list a {
+      padding: 0.25em 1em;
       color: #333333;
       font-weight: 600;
       font-size: 0.75em;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      transition: all 0.3s; }
       header .inline-list a:hover {
-        color: #4d4d4d; }
+        border: 0;
+        color: #ffeae0; }
   header .hover-bubble {
     position: absolute;
     left: 50%;
@@ -4999,11 +5003,22 @@ header {
     margin-top: -0.5em;
     margin-left: -8em;
     background-color: #ad3c00;
-    border-radius: 50%; }
+    border-radius: 50%;
+    -webkit-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.175);
+    -moz-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.175);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.175);
+    -webkit-transition-delay: 0.1s;
+    -moz-transition-delay: 0.1s;
+    transition-delay: 0.1s; }
     @media (min-width: 26.875em) {
       header .hover-bubble {
         left: 0;
         margin-left: 0; } }
+  header .hover-bubble--nav {
+    border-radius: 1.25em; }
+  header a {
+    position: relative;
+    z-index: 2; }
 
 /* Home
  */
