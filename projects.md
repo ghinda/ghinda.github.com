@@ -22,3 +22,14 @@ Unofficial mobile schedule web app for the Peninsula festival in Romania, Cluj-N
 
 * [RightTasks for Gmail™ Chrome Extension](https://chrome.google.com/webstore/detail/righttasks-for-gmail/hgniockidojcaaolfcbbkaaakbjdebpe).
 Adds your Google Tasks to the right side in Gmail, like in Google Calendar.
+
+
+KDE Plasma Add-ons
+------------------
+
+* [Actos Dashboard](http://kde-look.org/content/show.php/Actos+Dashboard?content=163711).
+KWin script for managing windows, apps and activities, similar to the Gnome Shell Activities view.
+
+* [Actos SoundMenu](http://kde-look.org/content/show.php/Actos+SoundMenu?content=163707).
+Simple Sound Menu plasmoid with volume and playback (MPRIS) controls for the current media player.
+
