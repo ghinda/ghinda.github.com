@@ -3,7 +3,7 @@ layout: static
 title: About
 ---
 
-I'm Ionuț Colceriu, I design and work on things that live mostly on the web. I live in Cluj-Napoca, Romania.
+I'm Ionuț Colceriu, I  work on things that live mostly on the web. I live in Cluj-Napoca, Romania.
 
 I design interfaces and create advanced JavaScript web apps. Some of my projects include [CSS Toggle Switch](http://ghinda.net/css-toggle-switch/), [Acorn Media Player](http://ghinda.net/acornmediaplayer/) or [Business Card Maker](http://bizcardmaker.com/).
 

@@ -1,9 +1,10 @@
 safe: true
 lsi: false
 pygments: true
-markdown: redcarpet
-permalink: /:title
+markdown: kramdown
+permalink: /article/:title
 url: http://ghinda.net
-category_dir: tag
 exclude:
-- README
+  - README
+sass:
+  sass_dir: css
