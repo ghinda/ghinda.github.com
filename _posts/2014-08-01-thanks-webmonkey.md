@@ -20,7 +20,7 @@ It was one of the few who had well-structured tutorials, with learning plans, co
 
 Dave Thau, or just Thau! as he was known on Webmonkey, wrote some of the best articles. His [Advanced JavaScript Tutorial](https://web.archive.org/web/20010602040619/http://hotwired.lycos.com/webmonkey/programming/javascript/tutorials/tutorial2.html) became pretty popular, and had stuff like cookies, timers or image preloading. It was awesome.
 
-His tutorials are the ones that initially got me into JavaScript, and helped me understand how it fit into with DOM and everything else.
+His tutorials are the ones that initially got me into JavaScript, and helped me understand how it worked with the DOM and everything else.
 
 The articles were so great I was downloading them onto floppy disks at cafés, to take home and read again. I had created my own personal “MDN”, that I could reference anytime I couldn’t remember a tag or a JavaScript method.
 
