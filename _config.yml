@@ -1,10 +1,8 @@
 safe: true
 lsi: false
-pygments: true
+highlighter: highlighter
 markdown: kramdown
 permalink: /article/:title
 url: http://ghinda.net
 exclude:
   - README
-sass:
-  sass_dir: css

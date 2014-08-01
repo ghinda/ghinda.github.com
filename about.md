@@ -19,7 +19,6 @@ The source-code is licensed under the MIT license, unless otherwise noted.
 ## Contact
 
 * Twitter: [@ghindas](https://twitter.com/ghindas)
-* Forrst: [ghinda](http://forrst.com/people/ghinda)
 * GitHub: [ghinda](http://github.com/ghinda)
 * LinkedIn: [Cristian-Ionut Colceriu](http://www.linkedin.com/in/ionutcolceriu)
 * Email: [contact@ghinda.net](mailto:contact@ghinda.net)

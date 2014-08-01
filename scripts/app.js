@@ -14,29 +14,33 @@
     hovers,
     $item;
 
-  for(i = 0; i < $nav.length; i++) {
-    $item = $nav[i];
+  var init = function() {
 
-    metrics[i] = {
-      top: $item.offsetTop - bubbleTop,
-      left: $item.offsetLeft - bubbleLeft,
-      width: $item.offsetWidth,
-      height: $item.offsetHeight
+    for(i = 0; i < $nav.length; i++) {
+      $item = $nav[i];
+
+      metrics[i] = {
+        top: $item.offsetTop - bubbleTop,
+        left: $item.offsetLeft - bubbleLeft,
+        width: $item.offsetWidth,
+        height: $item.offsetHeight
+      }
+
+      var mouseover = function() {
+        var j = i;
+        return function() {
+          moveBubble(j);
+        }
+      }();
+
+      $nav[i].addEventListener('mouseover', mouseover);
+
+      $nav[i].addEventListener('mouseout', function() {
+        moveBubble(0);
+      });
     }
 
-    var mouseover = function() {
-      var j = i;
-      return function() {
-        moveBubble(j);
-      }
-    }();
-
-    $nav[i].addEventListener('mouseover', mouseover);
-
-    $nav[i].addEventListener('mouseout', function() {
-      moveBubble(0);
-    });
-  }
+  };
 
   var moveBubble = function(index) {
 
@@ -63,5 +67,7 @@
 
   };
 
+  // give it a second to get the layout
+  setTimeout(init, 500);
 
 })();

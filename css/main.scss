@@ -2,63 +2,47 @@
 ---
 
 /* ghinda.net
- */
+*/
 
-/* Bourbon
- */
-@import '../bower_components/bourbon/app/assets/stylesheets/_bourbon.scss';
+/* 3rd party
+*/
+@import '../bower_components/bourbon/dist/bourbon';
+@import '../bower_components/normalize.css/normalize.css';
 
 /* Globals
- */
+*/
 $color1: #AD3C00;
-$color2: #AA2F76;
-$white: #fff;
 $black: #333;
 
-
-/* Foundation
- */
-$primary-color: $color1;
-$button-border-width: 0px;
-$small-screen: 430px;
-
-@import '../bower_components/foundation/scss/foundation';
-@import 'ie8-grid-foundation-4';
-
-/* Utils
- */
-@import "utils";
-
-/* Themes
- */
+/* Imports
+*/
+@import 'custom-font';
+@import 'utils';
 @import 'themes';
-
-/* Syntax Highlighter
- */
 @import 'syntax';
 
 /* BrowseHappy
- */
+*/
 .browsehappy {
-	margin: 0.2em 0;
-	background: #ccc;
-	color: #000;
-	padding: 0.2em 0;
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
 }
 
 /* Main
- */
+*/
 
-body {
-	padding-top: emCalc(60);
+*,
+*:before,
+*:after {
+  @include box-sizing(border-box);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-	font-weight: 600;
+body {
+  padding-top: emCalc(60);
+
+  line-height: 1.6;
 }
 
 body,
@@ -67,205 +51,259 @@ h2,
 h3,
 h4,
 h5 {
-	font-family: 'Open Sans', sans-serif;
+  font-family: 'Oxygen', sans-serif;
 }
 
 
 h1 {
-	font-size: emCalc(32);
+  margin: 0 0 emCalc(12);
+
+  font-size: emCalc(48);
+  font-weight: 300;
+  line-height: 1em;
 }
 
 h2 {
-	font-size: emCalc(24);
+  margin: 0 0 emCalc(4);
+
+  font-size: emCalc(24);
 }
 
-.row {
-	max-width: emCalc(540);
+p,
+blockquote {
+  margin: 0 0 emCalc(16);
 }
 
 a {
-	border-bottom: 1px solid transparent;
+  border-bottom: 1px solid transparent;
 
-	&:hover {
-		border-color: lighten($color1, 50%);
-	}
+  color: $color1;
+  text-decoration: none;
+
+  &:hover {
+    border-color: lighten($color1, 50%);
+  }
 }
 
 code {
-	color: darken($color1, 10%);
+  color: darken($color1, 10%);
 }
 
 article {
-	padding-bottom: emCalc(40);
+  padding-bottom: emCalc(40);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+blockquote {
+  display: block;
+  overflow: hidden;
+  padding: 0 emCalc(8) 0 emCalc(28);
+  border-left: 5px solid lighten($color1, 48%);
+
+  color: lighten($black, 20%);
+}
+
+.container-page {
+  max-width: emCalc(560);
+  margin: 0 auto;
 }
 
 /* Header
- */
+*/
 
 header {
-	position: relative;
-	padding-bottom: emCalc(60);
+  @include clearfix;
+  position: relative;
+  padding: 0 0 emCalc(60);
+  margin: 0 0 0 emCalc(-20);
 
-	.columns {
-		position: static;
-		vertical-align: baseline;
+  h1 {
+    float: left;
+    margin: 0;
 
-		text-align: center;
+    font-size: emCalc(24);
+    letter-spacing: emCalc(-0.1);
+    vertical-align: middle;
 
-		@include breakpoint(papa-bear) {
-			text-align: left;
-		}
+    .icon-ghinda-logo {
+      display: inline-block;
+      margin: 0 emCalc(12) 0 emCalc(8);
 
-		&:last-child {
-			@include breakpoint(papa-bear) {
-				text-align: right;
-			}
-		}
-	}
+      color: #fff;
+      font-size: emCalc(26);
+      vertical-align: middle;
 
+      @include transition(all 0.24s);
+    }
 
-	h1 {
-		margin: 0;
+    a {
+      border: 0;
 
-		font-size: emCalc(24);
-		letter-spacing: emCalc(-0.1);
+      white-space: nowrap;
+    }
+  }
 
-		img {
-			margin-right: emCalc(16);
-			height: emCalc(32);
-		}
+  nav {
+    float: right;
+  }
 
-		a {
-			border: 0;
-			white-space: nowrap;
-		}
-	}
+  ul {
+    overflow: hidden;
+    margin: 0;
+    padding: emCalc(10) 0 0;
+    list-style-type: none;
 
-	nav {
-		display: inline-block;
-	}
+    li {
+      float: left;
+    }
 
-	.inline-list {
-		margin: 0;
-		padding-top: emCalc(16);
+    a {
+      padding: emCalc(4) emCalc(16);
 
-		a {
-			padding: emCalc(4) emCalc(16);
+      color: $black;
+      font-weight: 600;
+      font-size: emCalc(12);
+      text-transform: uppercase;
 
-			color: $black;
-			font-weight: 600;
-			font-size: emCalc(12);
-			text-transform: uppercase;
+      @include transition(color 0.3s);
 
-			@include transition(all 0.3s);
+      &:hover {
+        border: 0;
 
-			&:hover {
-				border: 0;
+        color: lighten($color1, 60%);
+      }
+    }
+  }
 
-				color: lighten($color1, 60%);
-			}
-		}
-	}
+  .hover-bubble {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    z-index: 1;
+    display: block;
+    width: emCalc(66);
+    height: emCalc(66);
+    margin-top: emCalc(-12);
+    margin-left: emCalc(-128);
+    background-color: $color1;
 
-	.hover-bubble {
-		position: absolute;
-		left: 50%;
-		top: 0;
-		z-index: 1;
-		display: block;
-		width: emCalc(64);
-		height: emCalc(64);
-		margin-top: emCalc(-8);
-		margin-left: emCalc(-128);
-		background-color: $color1;
+    border-radius: 50%;
 
-		border-radius: 50%;
+    @include breakpoint(papa-bear) {
+      left: 0;
+      margin-left: 0;
+    }
 
-		@include breakpoint(papa-bear) {
-			left: 0;
-			margin-left: 0;
-		}
+    @include transition(all 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.175));
+    @include transition-delay(0.1s);
+  }
 
-		@include transition(all 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.175));
-		@include transition-delay(0.1s);
-	}
+  .hover-bubble--nav {
+    border-radius: emCalc(20);
+  }
 
-	.hover-bubble--nav {
-		border-radius: emCalc(20);
-	}
+  .hover-bubble--nav + h1 .icon-ghinda-logo {
+    margin-right: emCalc(4);
 
-	a {
-		position: relative;
-		z-index: 2;
-	}
+    color: $color1;
+  }
+
+  a {
+    position: relative;
+    z-index: 2;
+  }
 
 }
 
 /* Home
- */
+*/
 
 .posts {
+  padding: 0;
+  list-style-type: none;
 
-	li {
-		margin-bottom: emCalc(16);
-	}
+  li {
+    margin-bottom: emCalc(16);
+  }
 
-	time {
-		color: lighten($black, 10%);
-		font-size: emCalc(12);
-	}
+  time {
+    color: lighten($black, 10%);
+    font-size: emCalc(12);
+  }
 
 }
 
 /* Post view
- */
+*/
 
 .post {
 
-	time {
-		color: lighten($black, 10%);
-	}
+  time {
+    color: lighten($black, 10%);
+    font-size: emCalc(12);
+  }
 }
 
 /* Promo
- */
+*/
 .promo {
-	padding: emCalc(40) 0;
-	margin-bottom: emCalc(40);
-	border-style: solid;
-	border-width: 1px 0;
-	border-color: lighten($color1, 50%);
+  padding: emCalc(28) 0;
+  margin-bottom: emCalc(40);
+  border-style: solid;
+  border-width: 1px 0;
+  border-color: lighten($color1, 50%);
 
-	p {
-		font-size: emCalc(14);
-	}
+  p {
+    margin: 0 0 emCalc(20);
 
-	li {
-		padding-bottom: 0;
+    font-size: emCalc(14);
+  }
 
-		text-align: center;
-	}
+  ul {
+    overflow: hidden;
+    padding: 0;
+    margin: 0 0 0 -3.33%;
+    list-style-type: none;
+  }
 
-	li img {
-		display: block;
-		margin: 0 auto;
-	}
+  li {
+    float: left;
+    width: 33.33%;
+    padding-left: 3.33%;
+
+    text-align: center;
+  }
+
+  a {
+    display: inline-block;
+
+  }
+
+  img {
+    display: block;
+    margin: 0 auto emCalc(8);
+  }
 }
 
 /* Footer
- */
+*/
 footer {
-	padding-bottom: emCalc(40);
+  padding-bottom: emCalc(40);
 
-	.footer-links {
-		overflow: hidden;
+  .footer-links {
+    overflow: hidden;
 
-		a:first-child {
-			padding-right: emCalc(16);
-		}
-	}
+    a:first-child {
+      display: inline-block;
+      margin-right: emCalc(16);
+    }
+  }
 
-	p {
-		font-size: emCalc(12);
-	}
+  p {
+    font-size: emCalc(12);
+  }
 }
