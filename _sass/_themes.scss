@@ -1,3 +1,122 @@
 /* Post themes
-*/
+ */
 
+/* Webmonkey
+ */
+
+.webmonkey {
+
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: emCalc(140);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #336699;
+    border-bottom: 3px solid #FFFF66;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: emCalc(112);
+    position: absolute;
+    top: emCalc(140);
+    left: 0;
+    z-index: -1;
+    background-color: #FF9900;
+    border-bottom: 2px solid #663300;
+  }
+
+  article h1 {
+    position: relative;
+    margin-bottom: emCalc(20);
+
+    color: #FFFF66;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 131px;
+      height: 135px;
+      position: absolute;
+      left: -140px;
+      top: -56px;
+      background: url(../images/themes/webmonkey.png);
+    }
+  }
+
+  header a {
+    color: #fff;
+  }
+
+  .hover-bubble {
+    background: #fff;
+  }
+
+  .icon-ghinda-logo,
+  header ul a:hover {
+    color: #336699;
+  }
+
+  .hover-bubble--nav + h1 .icon-ghinda-logo {
+    color: #fff;
+  }
+
+}
+
+
+/* Gmail right-tasks
+ */
+
+.gmail-righttasks {
+
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: emCalc(140);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #2D3E50;
+  }
+
+  article h1 {
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 36px;
+      height: 28px;
+      position: absolute;
+      left: -60px;
+      top: 12px;
+      background: url(../images/themes/gmail-righttasks.png) no-repeat;
+    }
+  }
+
+  header a {
+    color: #fff;
+  }
+
+  .hover-bubble {
+    background: #fff;
+  }
+
+  .icon-ghinda-logo,
+  header ul a:hover {
+    color: #2D3E50;
+  }
+
+  .hover-bubble--nav + h1 .icon-ghinda-logo {
+    color: #fff;
+  }
+
+}

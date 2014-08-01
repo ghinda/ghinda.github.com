@@ -9,11 +9,11 @@ If you have direct access to the specific JPEG image, when the image is on the s
 
 [XMLHttpRequest 2 support](http://caniuse.com/#feat=xhr2) was introduced in Android 3.0.
 
-```javascript
+{% highlight javascript %}
 var imageXhr = new XMLHttpRequest();
 imageXhr.open('GET', 'path/to/image.jpg', true);
 imageXhr.responseType = 'blob';
-```
+{% endhighlight %}
 
 ## Get image from `canvas`
 
@@ -27,10 +27,10 @@ Here's a simple [test for the `canvas.toDataURL('image/jpeg')` method](http://js
 
 The only work-around is to use a [JavaScript JPEG Encoder](http://web.archive.org/web/20120830003356/http://www.bytestrom.eu/blog/2009/1120a_jpeg_encoder_for_javascript), and encode the raw image data yourself.
 
-```javascript
+{% highlight javascript %}
 var encoder = new JPEGEncoder();
 var imageData = encoder.encode(canvas.getContext('2d').getImageData(0, 0, canvasWidth, canvasHeight), 100);
-```
+{% endhighlight %}
 
 You can now convert the image data to a Blob.
 
@@ -50,12 +50,12 @@ The `canvas.toBlob` polyfill adds an additional function called [`dataURLtoBlob`
 
 XHR2 allows us to send additional formats with AJAX beside FormData, like Blob or ArrayBuffer. We can simply use the `send` method with our Blob as the parameter.
 
-```javascript
+{% highlight javascript %}
 var xhr = new XMLHttpRequest();
 xhr.open('POST', 'upload/binary/jpeg', true);
 xhr.setRequestHeader('Content-Type', 'image/jpeg');
 xhr.send(blob);
-```
+{% endhighlight %}
 
 While the request works as expected on supporting desktop browsers, there seems to be a bug in Android that sends the request completely empty. Here's a [test for `xhr.send(blob)` using GitHub's API](http://jsfiddle.net/ghinda/fRgbf/), which sends both a Blob and an ArrayBuffer.
 

@@ -1,6 +1,7 @@
 ---
 title: Thanks Webmonkey
 layout: post
+theme: webmonkey
 ---
 
 Around 2000, there weren’t that many “tutorial websites” out there for web development. The tutorials available were hard to follow or not that well-written. All but the ones on Webmonkey.

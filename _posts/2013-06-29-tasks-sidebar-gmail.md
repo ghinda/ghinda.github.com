@@ -1,9 +1,8 @@
 ---
 title: Google Tasks sidebar in Gmail
 layout: post
+theme: gmail-righttasks
 ---
-
-[![RightTasks for Gmail, Chrome Extension]({{ site.url }}/media/images/righttasks-promo-header.png)](https://chrome.google.com/webstore/detail/righttasks-for-gmail/hgniockidojcaaolfcbbkaaakbjdebpe)
 
 A couple of months ago I released the [RightTasks for Gmail](https://chrome.google.com/webstore/detail/righttasks-for-gmail/hgniockidojcaaolfcbbkaaakbjdebpe) extension for Chrome, which adds your Google Tasks to a sidebar in Gmail.
 

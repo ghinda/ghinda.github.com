@@ -50,84 +50,84 @@ But, it turns out that setting the `checked` property on the input with JavaScri
 
 The script I put together is pretty straight forward, except for a couple of things.
 
-```javascript
+{% highlight css %}
 /* Minimal Touch support test.
- * You should probably use Modernizr.
- */
+* You should probably use Modernizr.
+*/
 var touchSupport = ('ontouchstart' in window),
-	mobile = (screen.width <= 1024);
+  mobile = (screen.width <= 1024);
 
 // Utility function, needed to get the input elements next to labels
 Object.prototype.previousObject = function() {
-	var p = this;
-	do p = p.previousSibling;
-	while (p && p.nodeType != 1);
-	return p;
+  var p = this;
+  do p = p.previousSibling;
+  while (p && p.nodeType != 1);
+  return p;
 }
 
 /* Manualy check the input, for Opera Mini/proxy browsers
- */
+*/
 function checkRadio(e) {
-	var input = e.target.previousObject(),
-		inputType = input.getAttribute('type');
+  var input = e.target.previousObject(),
+    inputType = input.getAttribute('type');
 
-	if(inputType === 'checkbox') {
+  if(inputType === 'checkbox') {
 
-		if(input.getAttribute('checked')) {
-			input.removeAttribute('checked');
-		} else {
-			input.setAttribute('checked', true);
-		}
+    if(input.getAttribute('checked')) {
+      input.removeAttribute('checked');
+    } else {
+      input.setAttribute('checked', true);
+    }
 
-	} else if(inputType === 'radio') {
+  } else if(inputType === 'radio') {
 
-		input.setAttribute('checked', true);
+    input.setAttribute('checked', true);
 
-	};
+  };
 };
 
 /* Force reflow
- */
+*/
 function forceReflow(e) {
-	/* There's a delay between taping a label, and checking the input.
-	 * That's why we have to
-	 */
-	if(e.target.previousObject().checked) {
-		// force reflow
-		document.body.className = document.body.className;
-	} else {
-		// if the input is not checked yet, try again
-		setTimeout(function() { forceReflow(e) }, 100);
-	};
+  /* There's a delay between taping a label, and checking the input.
+  * That's why we have to
+  */
+  if(e.target.previousObject().checked) {
+    // force reflow
+    document.body.className = document.body.className;
+  } else {
+    // if the input is not checked yet, try again
+    setTimeout(function() { forceReflow(e) }, 100);
+  };
 };
 
 /* Get all labels on the page.
- * You should use a more specific selector on your page.
- */
+* You should use a more specific selector on your page.
+*/
 var labels = document.querySelectorAll('label');
 
 if(touchSupport) {
-	// Mobile Webkit(Android, iOS, BB, WebOS, etc.), and others with Touch support
-	for(var i = 0; i < labels.length; i++ ) {
-		labels[i].ontouchstart = forceReflow;
-	};
+  // Mobile Webkit(Android, iOS, BB, WebOS, etc.), and others with Touch support
+  for(var i = 0; i < labels.length; i++ ) {
+    labels[i].ontouchstart = forceReflow;
+  };
 
 } else if(mobile) {
-	// Non-touch browsers, Opera Mini and other proxy-browsers
-	for(var i = 0; i < labels.length; i++ ) {
-		labels[i].onclick = checkRadio;
-	};
+  // Non-touch browsers, Opera Mini and other proxy-browsers
+  for(var i = 0; i < labels.length; i++ ) {
+    labels[i].onclick = checkRadio;
+  };
 
 };
-```
+{% endhighlight %}
 
 I'm using the timeout because there seems to be a delay between taping the label, and the input actually getting checked. If we trigger the reflow too early, before the input is checked, it still won't change it's position. So we have to wait until the input is checked, before the reflow.
 
 The reflow is triggered using:
 
-```javascript
+{% highlight css %}
 document.body.className = document.body.className
-```
+{% endhighlight %}
 
 These solutions should also work on other &ldquo;checkbox-hack&rdquo; experiments.
 

@@ -3,3 +3,4 @@ _site
 _*.swp
 .DS_Store
 Thumbs.db
+Gemfile.lock

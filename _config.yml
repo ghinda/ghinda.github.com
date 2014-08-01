@@ -1,6 +1,6 @@
 safe: true
 lsi: false
-highlighter: highlighter
+highlighter: pygments
 markdown: kramdown
 permalink: /article/:title
 url: http://ghinda.net
