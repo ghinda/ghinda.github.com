@@ -3,19 +3,24 @@ title: Mobile support for the CSS toggle switches
 layout: post
 ---
 
-*Update October 2012:*
+> **Update December 2012**
+>
+> The latest version of the toggle switch has full mobile support and easy integration with [Twitter Bootstrap](http://ghinda.net/css-toggle-switch/bootstrap.html) or [ZURB Foundation](http://ghinda.net/css-toggle-switch/foundation.html).
+>
+> See the latest demos: [CSS Toggle Switch](http://ghinda.net/css-toggle-switch/).
 
-After some testing it turns out that the Android 2.3 browser, and possibly other older Webkit browsers, are affected by this older [WebKit Adjacent/General Sibling and Pseudo Class Bug](http://css-tricks.com/webkit-sibling-bug/), which was causing issues with the toggle switches.
+> **Update October 2012**
+>
+> After some testing it turns out that the Android 2.3 browser, and possibly other older Webkit browsers, are affected by this older [WebKit Adjacent/General Sibling and Pseudo Class Bug](http://css-tricks.com/webkit-sibling-bug/), which was causing issues with the toggle switches.
+>
+> The fix I added is based on the one described in the article above, but applied only to the containers, not the whole `body`, for performance reasons.
+>
+> Another issue was that, [on older iOS versions the `input` was not selected, when tapping the label](http://stackoverflow.com/questions/7358781/tapping-on-label-in-mobile-safari). The work-around for this was to add an empty `onclick` handler. This handler also makes Opera Mini re-render the page, with the right input selected.
+>
+> These changes completely remove the need for the JavaScript functionality that was previously adding mobile support.
+>
+> Latest demos: [CSS Toggle Switch](http://ghinda.net/css-toggle-switch/).
 
-The fix I added is based on the one described in the article above, but applied only to the containers, not the whole `body`, for performance reasons.
-
-Another issue was that, [on older iOS versions the `input` was not selected, when tapping the label](http://stackoverflow.com/questions/7358781/tapping-on-label-in-mobile-safari). The work-around for this was to add an empty `onclick` handler. This handler also makes Opera Mini re-render the page, with the right input selected.
-
-These changes completely remove the need for the JavaScript functionality that was previously adding mobile support.
-
-Latest demos: [CSS Toggle Switch](http://ghinda.net/css-toggle-switch/).
-
-***
 
 While testing the [CSS toggle switches](/css-toggle-switches) from my last article, I noticed they had issues, or didn't work at all, in various mobile browsers. The only mobile browsers which seemed to properly support the switches were Firefox Mobile and Opera Mobile.
 

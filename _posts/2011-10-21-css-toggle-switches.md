@@ -4,13 +4,11 @@ published: true
 layout: post
 ---
 
-*Update December 2012:*
-
-The latest version of the toggle switch has full mobile support and easy integration with [Twitter Bootstrap](http://ghinda.net/css-toggle-switch/bootstrap.html) or [ZURB Foundation](http://ghinda.net/css-toggle-switch/foundation.html).
-
-See the latest demos: [CSS Toggle Switch](http://ghinda.net/css-toggle-switch/).
-
-***
+> **Update December 2012**
+>
+> The latest version of the toggle switch has full mobile support and easy integration with [Twitter Bootstrap](http://ghinda.net/css-toggle-switch/bootstrap.html) or [ZURB Foundation](http://ghinda.net/css-toggle-switch/foundation.html).
+>
+> See the latest demos: [CSS Toggle Switch](http://ghinda.net/css-toggle-switch/).
 
 Back in August I saw [Orman Clark](http://www.premiumpixels.com)'s latest work at the time, a [set of beautiful toggle switches](http://www.premiumpixels.com/freebies/sort-switches-toggles-psd/), and decided I'd have a go at creating a functional version of them.
 
@@ -246,6 +244,6 @@ The switches look right in all the browsers, but the toggle buttons don't move w
 <del>I'm working on a solution for this, and will follow-up with a new post addressing mobile support for the switches. </del>
 </p>
 
-*Update: I've added mobile support for the toggle switches, describing the development process in a new article: [Mobile support for the CSS toggle switches](/article/css-toggle-switches-mobile).*
+> I've added mobile support for the toggle switches, describing the development process in a new article: [Mobile support for the CSS toggle switches](/article/css-toggle-switches-mobile).
 
 *Any ideas?* You can contribute to the [css-toggle-switch GitHub repository](https://github.com/ghinda/css-toggle-switch).
