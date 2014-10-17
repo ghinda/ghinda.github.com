@@ -3,20 +3,20 @@ title: Turn your old Android phone into a media center
 layout: post
 ---
 
-> If you have a non-smart TV with USB support and an Android phone, this will show you how to turn them into a poor man’s internet-connected media center. It will include a torrent server with remote access and automatic torrent downloads, Samba and SSH.
+> If you have a non-smart TV with USB support and an Android phone, this will show you how to turn them into a poor man’s media center. It will include a torrent server with remote access and automatic torrent downloads, Samba and SSH.
 
 In my case, I’m using a Samsung LE32E TV and an Alcatel OT-918 smartphone.
 
-Everything you’ll need to do is related to the phone, so you won’t have to change anything on the TV.
+We'll work only with the phone, so you won’t have to change anything on the TV.
 
 First, you need to make sure your device is rooted. See this guide for [rooting the Alcatel OT-918](http://forum.xda-developers.com/showthread.php?t=1748927).
 
-Next up, if you’re also using an older phone with a smaller internal memory, you need a partitioned SD card, with a larger ext2/3/4 partition and the rest as FAT32. In my case, I’m using a 32GB SD card with a 1GB ext2 partition and the rest as FAT32. I definitely recommend using a class 10 SD card.
+Next up, if you’re also using an older phone with a smaller internal memory, you need a partitioned SD card, with a larger `ext2/3/4` partition and the rest as `FAT32`. I’m using a 32GB SD card with a 1GB `ext2` partition and the rest as `FAT32`. I definitely recommend using a class 10 SD card.
 
-This means your Android kernel needs to have support for ext partitions.
+This means your Android kernel needs to have support for `ext` partitions.
 See this [kernel with ext support for Alcatel OT-918](http://forum.xda-developers.com/showpost.php?p=42693393&postcount=239).
 
-After you’ve partitioned your SD card, and made sure you have ext support in the kernel, use [Link2SD](https://play.google.com/store/apps/details?id=com.buak.Link2SD&hl=en) or something similar to mount the ext partition.
+After you’ve partitioned your SD card, and made sure you have `ext` support in the kernel, use [Link2SD](https://play.google.com/store/apps/details?id=com.buak.Link2SD&hl=en) or something similar to mount the ext partition.
 
 Then connect your phone to your WiFi router and set a static IP for it. If you’re using Android 2.3, go to `Settings > WiFi Settings > Advanced` and press `Use static IP`. Set the IP to something like `192.168.1.XX`.
 
@@ -24,11 +24,11 @@ Then connect your phone to your WiFi router and set a static IP for it. If you�
 
 We’ll start installing software on the phone. You’ll need to use a Linux system for this. Using a Live CD should also work.
 
-[Optware](http://www.nslu2-linux.org/wiki/Optware/HomePage) is a lightweight package manager for Linux. We’ll install on the phone and use it to install the rest of the packages we need.
+[Optware](http://www.nslu2-linux.org/wiki/Optware/HomePage) is a lightweight package manager for Linux. We’ll install it on the phone and use it to get the rest of the packages we need.
 
 Make sure you have `adb` installed. If you’re running Ubuntu you just need to install the `android-tools-adb` package.
 
-Connect the device to your PC and ,in a terminal, run:
+Connect the device to your PC and, in a terminal, run:
 
 {% highlight bash %}
 sudo adb devices
@@ -38,23 +38,29 @@ Your device should show up in a list.
 
 Download the [Optware package manager install script](https://github.com/pfalcon/optware-android/blob/master/optware-install-via-adb.sh).
 
-If you’re using an older Android device with small internal memory, edit the `optware-install-via-adb.sh` script, and change the `OPTWARE_DIR` variable to point to an `/opt` folder on your mounted ext partition.
-The variable should look similar to `OPTWARE_DIR=/data/sdext2/opt`.
+If your Android device has a small internal memory, edit the `optware-install-via-adb.sh` script, and change the `OPTWARE_DIR` variable to point to an `/opt` folder on your mounted `ext` partition.
+The variable should look like `OPTWARE_DIR=/data/sdext2/opt`.
 
-Otherwise, if you’re device has plenty of internal memory, you can just leave the script as it is.
+Otherwise, if your device has plenty of internal memory, you can just leave the script as it is.
 
-Now run the script with `./optware-install-via-adb.sh`. This will install [Optware for Android](https://github.com/pfalcon/optware-android) on your device.
+Now run the script with:
 
-We now have a proper package manager on the device, so we’ll open a shell on the device and start installing packages.
+{% highlight bash %}
+./optware-install-via-adb.sh
+{% endhighlight %}
 
-Connect to the adb shell and start the Optware shell with:
+This will install [Optware for Android](https://github.com/pfalcon/optware-android) on your device.
+
+We now have a proper package manager on the device, so we’ll open a shell and start installing packages.
+
+Connect to the `adb shell` and start the Optware shell with:
 
 {% highlight bash %}
 adb shell
 ./data/sdext2/opt/start.sh
 {% endhighlight %}
 
-Now install everything related to Transmission (the torrent server), Flexget (automatic torrent downloads), OpenSSH and Samba.
+Now install everything related to Transmission (torrent server), FlexGet (automatic downloads), OpenSSH and Samba.
 
 {% highlight bash %}
 ipkg update
@@ -110,7 +116,7 @@ Now restart OpenSSH with:
 /opt/etc/init.d/S40sshd
 {% endhighlight %}
 
-Sometimes when restarting OpenSSH, it will complain about the host key. If it does, manually create it with:
+Sometimes when restarting OpenSSH, it will complain about the host key. If it does, create it with:
 
 {% highlight bash %}
 ssh-keygen -t ecdsa -f /opt/etc/openssh/ssh_host_ecdsa_key -N ''
@@ -136,7 +142,7 @@ Now restart Samba with
 
 and it should be working.
 
-There is an issue with Samba that is preventing you from deleting any files on the device. I haven’t managed to figure out when the cause is yet. It’s possible that it’s a bug in the older version of Samba that is packaged for Optware.
+There is an issue with Samba that is preventing you from deleting any files on the device. I haven’t managed to figure out when the cause is yet. It’s possible that the old version of Samba packaged for Optware has this bug.
 
 ## Configure Transmission
 
@@ -149,7 +155,7 @@ killall transmission-daemon
 
 You can edit the config file at `opt/home/root/.config/transmission-daemon/settings.json`, or just use my [settings.json](https://github.com/ghinda/optware-mediacenter/blob/master/opt/home/root/.config/transmission-daemon/settings.json).
 
-A good idea is to change the `download-dir` to point to the location you want it to download the torrents on the FAT32 SD card partition. If you enable RPC by setting the `rpc-enabled` property to `true`, you’ll also be able to connect to the web interface at `http://192.168.1.XX:9091/` or use the [Transmission Remote GUI](https://code.google.com/p/transmisson-remote-gui/).
+A good idea is to change the `download-dir` to point to the location you want it to download the torrents on the FAT32 SD card partition. Set the `rpc-enabled` property to `true`, to enable RPC and be able to connect to the web interface at `http://192.168.1.XX:9091/` or use the [Transmission Remote GUI](https://code.google.com/p/transmisson-remote-gui/).
 
 These are both already done in my [settings.json](https://github.com/ghinda/optware-mediacenter/blob/master/opt/home/root/.config/transmission-daemon/settings.json) file.
 
@@ -162,13 +168,17 @@ transmission-daemon
 
 ## Configure FlexGet
 
-[FlexGet](http://flexget.com/) is a multipurpose download automation tool. We’ll use it to automatically download torrents.
+[FlexGet](http://flexget.com/) is a multipurpose download automation tool. We’ll use it to automate downloads.
 
 To configure Flexget, edit the `/opt/home/root/.flexget/config.yml` file. You can check out the [FlexGet Cookbook](http://flexget.com/wiki/Cookbook) for config file examples.
 
+See [the Transmission config example](http://flexget.com/wiki/Cookbook/Series/AdvancedTransmissionAndDownloadManagement), to connect FlexGet to it, and have it add torrents automatically.
+
+If you need automatic subtitle downloads, we installed Periscope before, so just follow the [FlexGet Periscope config](http://flexget.com/wiki/Plugins/periscope).
+
 Now copy the [flexget.sh](https://github.com/ghinda/optware-mediacenter/blob/master/opt/flexget.sh) file to `/opt/flexget.sh`.
 
-We’ll use this file to periodically run the Flexget tasks. Flexget does have a `daemon` mode with a scheduler, but I noticed it’s a real memory hog, so I can’t use it.
+We’ll use this file to run the Flexget tasks. Flexget does have a `daemon` mode with a scheduler, but I noticed it’s a real memory hog, so I can’t use it.
 
 
 ## Configure autorun and scheduling
@@ -182,9 +192,9 @@ You need to set up the two scripts in Script Manager. Set `/opt/start.sh` to run
 
 ## Dual Mount
 
-By default, when connecting the Phone to the TV by USB, all apps on the phone, including Transmission and FlexGet will not be able to access the SD card. To get around this, we have to use a `dual mount` app.
+By default, when you connect the Phone to the TV with USB, all apps on the phone, including Transmission and FlexGet will not be able to access the SD card. To get around this, we have to use a `dual mount` app.
 
-The app will mount the SD card on phone and the TV at the same time. This is generally not a good idea, since it will usually corrupt your SD card when doing simultaneous writes, but in this case the TV has read-only access, so it won’t happen.
+The app will mount the SD card on phone and the TV at the same time. This is usually not a good idea, since it will corrupt your SD card when doing simultaneous writes, but in this case the TV has read-only access, so it won’t happen.
 
 I recommend using [Dual Mount SD Widget](https://play.google.com/store/apps/details?id=com.protocol.x.USB) since it’s the one that worked best for me.
 
