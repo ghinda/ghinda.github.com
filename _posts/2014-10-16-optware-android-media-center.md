@@ -142,7 +142,19 @@ Now restart Samba with
 
 and it should be working.
 
-There is an issue with Samba that is preventing you from deleting any files on the device. I haven’t managed to figure out when the cause is yet. It’s possible that the old version of Samba packaged for Optware has this bug.
+<p>
+<del>
+There is an issue with Samba that is preventing you from deleting any files on the device. I haven’t managed to figure out what the cause is yet. It’s possible that the old version of Samba packaged for Optware has this bug.
+</del>
+</p>
+
+> On Ubuntu, mounting the Samba share with `cifs` fixes the issues with deleting files.
+
+Add this to your `/etc/fstab` to mount the share with `cifs`:
+
+{% highlight bash %}
+//192.168.1.X/sdcard /media/MOUNT_POINT cifs users,username=root,password="",rw,nounix,iocharset=utf8,file_mode=0777,dir_mode=0777 0 0
+{% endhighlight %}
 
 ## Configure Transmission
 
