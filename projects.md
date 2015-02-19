@@ -22,8 +22,8 @@ Generate unique, secure passwords on FirefoxOS.
 * [Peninsula](https://github.com/ghinda/peninsula).
 Unofficial mobile schedule web app for the Peninsula festival in Romania, Cluj-Napoca.
 
-* [RightTasks for Gmail™ Chrome Extension](https://chrome.google.com/webstore/detail/righttasks-for-gmail/hgniockidojcaaolfcbbkaaakbjdebpe).
-Adds your Google Tasks to the right side in Gmail, like in Google Calendar.
+* [RightTasks for Gmail™ Browser Extension](https://github.com/ghinda/righttasks).
+Adds your Google Tasks to the right side in Gmail, like in Google Calendar. Available for [Chrome](https://chrome.google.com/webstore/detail/righttasks-for-gmail/hgniockidojcaaolfcbbkaaakbjdebpe?utm_source=chrome-ntp-icon), [Opera](https://addons.opera.com/en/extensions/details/righttasks-for-gmailtm/?display=en) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/righttasks-for-gmail/).
 
 
 KDE Plasma Add-ons

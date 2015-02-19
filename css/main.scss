@@ -289,6 +289,24 @@ header {
   }
 }
 
+.promo--alt img {
+  margin: 0;
+}
+
+.promo--alt li:first-child a {
+  padding: 0;
+}
+
+.promo--alt li:first-child a:hover {
+  border-color: transparent;
+}
+
+.promo--alt li:last-child {
+  width: 66.66%;
+  
+  text-align: left;
+}
+
 /* Footer
 */
 footer {
