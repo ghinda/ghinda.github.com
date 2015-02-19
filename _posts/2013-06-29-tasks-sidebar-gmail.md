@@ -18,4 +18,4 @@ There are also other extensions for Tasks, but having to manually open a popup, 
 
 [RightTasks](https://chrome.google.com/webstore/detail/righttasks-for-gmail/hgniockidojcaaolfcbbkaaakbjdebpe) uses the default Tasks widget, so you have all the official features available, like adding an email as a task, with the `SHIFT + T` keyboard shortcut, or focusing on the Tasks widget with the `G then K` keyboard shortcut.
 
-You can contribute to the extension, or report any issues, on GitHub: [https://github.com/ghinda/gmail-righttasks](https://github.com/ghinda/gmail-righttasks).
+You can contribute to the extension, or report any issues, on GitHub: [https://github.com/ghinda/righttasks](https://github.com/ghinda/righttasks).

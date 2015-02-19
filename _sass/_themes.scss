@@ -58,13 +58,16 @@
     background: #fff;
   }
 
-  .icon-ghinda-logo,
   header ul a:hover {
     color: #336699;
   }
+  
+  .icon-ghinda-logo path {
+    fill: #336699;
+  }
 
-  .hover-bubble--nav + h1 .icon-ghinda-logo {
-    color: #fff;
+  .hover-bubble--nav + h1 .icon-ghinda-logo path {
+    fill: #fff;
   }
 
 }
@@ -110,13 +113,16 @@
     background: #fff;
   }
 
-  .icon-ghinda-logo,
   header ul a:hover {
     color: #2D3E50;
   }
+  
+  .icon-ghinda-logo path {
+    fill: #2D3E50;
+  }
 
-  .hover-bubble--nav + h1 .icon-ghinda-logo {
-    color: #fff;
+  .hover-bubble--nav + h1 .icon-ghinda-logo path {
+    fill: #fff;
   }
 
 }

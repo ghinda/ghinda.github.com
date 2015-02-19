@@ -16,7 +16,6 @@ $black: #333;
 
 /* Imports
 */
-@import 'custom-font';
 @import 'utils';
 @import 'themes';
 @import 'syntax';
@@ -129,17 +128,6 @@ header {
     letter-spacing: emCalc(-0.1);
     vertical-align: middle;
 
-    .icon-ghinda-logo {
-      display: inline-block;
-      margin: 0 emCalc(12) 0 emCalc(8);
-
-      color: #fff;
-      font-size: emCalc(26);
-      vertical-align: middle;
-
-      @include transition(all 0.24s);
-    }
-
     a {
       border: 0;
 
@@ -207,9 +195,11 @@ header {
   }
 
   .hover-bubble--nav + h1 .icon-ghinda-logo {
-    margin-right: emCalc(4);
-
-    color: $color1;
+    margin-right: emCalc(8);
+  }
+  
+  .hover-bubble--nav + h1 .icon-ghinda-logo path {
+    fill: $color1;
   }
 
   a {
@@ -217,6 +207,24 @@ header {
     z-index: 2;
   }
 
+}
+
+.icon-ghinda-logo {
+  display: inline-block;
+  width: emCalc(20);
+  height: emCalc(28);
+  margin: 0 emCalc(20) 0 emCalc(12);
+  
+  vertical-align: middle;
+}
+
+.icon-ghinda-logo path {
+  fill: #fff;
+}
+
+.icon-ghinda-logo,
+.icon-ghinda-logo path {
+  @include transition(all 0.24s);
 }
 
 /* Home
