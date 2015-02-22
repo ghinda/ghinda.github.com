@@ -4,6 +4,8 @@ layout: post
 theme: gmail-righttasks
 ---
 
+> RightTasks is now also available for [Opera](https://addons.opera.com/en/extensions/details/righttasks-for-gmailtm/) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/righttasks-for-gmail/).
+
 A couple of months ago I released the [RightTasks for Gmail](https://chrome.google.com/webstore/detail/righttasks-for-gmail/hgniockidojcaaolfcbbkaaakbjdebpe) extension for Chrome, which adds your Google Tasks to a sidebar in Gmail.
 
 Google Calendar has this feature by default, and allows you to have your Google Tasks visible in a sidebar, on the right side of the calendar. Since it's so handy, people have been asking for the same feature in Gmail for, at least, as long as it's been available in Calendar.
