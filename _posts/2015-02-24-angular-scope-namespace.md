@@ -1,6 +1,7 @@
 ---
 title: Simple Angular scope namespacing
 layout: post
+theme: theme-angular
 ---
 
 The best way to work with controller scopes in Angular is to avoid using the `$scope` object as much as possible. Instead you should use the `controllerAs` syntax introduced in Angular 1.2.

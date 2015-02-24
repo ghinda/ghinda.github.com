@@ -126,3 +126,69 @@
   }
 
 }
+
+/* Angular
+ */
+
+.theme-angular {
+  @include linear-gradient(#F5F5F5, #fff 2%);
+}
+
+.theme-angular a {
+  color: #A6120D;
+}
+
+.theme-angular .hover-bubble--nav + h1 .icon-ghinda-logo path {
+  fill: #DD1B16;
+}
+
+.theme-angular .hover-bubble {
+  background: transparent;
+  border-radius: 0;
+}
+
+.theme-angular .hover-bubble:before,
+.theme-angular .hover-bubble:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 55%;
+  height: 100%;
+  
+  border-style: solid;
+  border-width: 3px 0 3px 3px;
+  border-color: #B3B3B3;
+}
+
+.theme-angular .hover-bubble:before {
+  background: #DD1B16;
+  
+  @include transform(
+    perspective(100px)
+    rotateY(-45deg)
+    rotateX(-14deg)
+    skewX(-9deg)
+  );
+}
+
+.theme-angular .hover-bubble:after {
+  left: auto;
+  right: 2px;
+  background: #A6120D;
+  border-width: 3px 3px 3px 0;
+  
+  @include transform(
+    perspective(100px)
+    rotateY(45deg)
+    rotateX(-14deg)
+    skewX(9deg)
+  );
+}
+
+.theme-angular .hover-bubble--nav:before,
+.theme-angular .hover-bubble--nav:after {
+  border-width: 0;
+}
+
