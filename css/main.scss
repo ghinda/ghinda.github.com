@@ -201,7 +201,7 @@ header {
   .hover-bubble--nav + h1 .icon-ghinda-logo {
     margin-right: emCalc(8);
   }
-  
+
   .hover-bubble--nav + h1 .icon-ghinda-logo path {
     fill: $color1;
   }
@@ -218,7 +218,7 @@ header {
   width: emCalc(20);
   height: emCalc(28);
   margin: 0 emCalc(20) 0 emCalc(13);
-  
+
   vertical-align: middle;
 }
 
@@ -270,9 +270,13 @@ header {
   border-color: lighten($color1, 50%);
 
   p {
-    margin: 0 0 emCalc(20);
+    margin: 0;
 
     font-size: emCalc(14);
+  }
+
+  > p {
+    margin: 0 0 emCalc(20);
   }
 
   ul {
@@ -315,7 +319,7 @@ header {
 
 .promo--alt li:last-child {
   width: 66.66%;
-  
+
   text-align: left;
 }
 
