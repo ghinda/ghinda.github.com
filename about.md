@@ -3,11 +3,13 @@ layout: static
 title: About
 ---
 
-I'm Ionuț Colceriu, I  work on things that live mostly on the web. I live in Cluj-Napoca, Romania.
+I'm Ionuț Colceriu, I  work on things that live mostly on the web, from Târgu-Mureș, Romania.
 
-I design interfaces and create advanced JavaScript web apps. Some of my projects include [CSS Toggle Switch](http://ghinda.net/css-toggle-switch/), [Acorn Media Player](http://ghinda.net/acornmediaplayer/) or [Business Card Maker](http://bizcardmaker.com/).
+I studied graphic and product design, and currently work with [Buiac](http://www.buiac.com/).
 
-You can find more details about my work experience on [my LinkedIn profile](http://www.linkedin.com/in/ionutcolceriu).
+I design interfaces and create advanced JavaScript web apps. Some of my free software projects are on [GitHub](https://github.com/ghinda).
+
+You can find more details about my professional experience on [LinkedIn](http://www.linkedin.com/in/ionutcolceriu).
 
 
 ## Licensing
@@ -22,4 +24,3 @@ The source-code is licensed under the MIT license, unless otherwise noted.
 * GitHub: [ghinda](http://github.com/ghinda)
 * LinkedIn: [Cristian-Ionut Colceriu](http://www.linkedin.com/in/ionutcolceriu)
 * Email: [contact@ghinda.net](mailto:contact@ghinda.net)
-
