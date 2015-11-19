@@ -1,9 +1,0 @@
-{
-  "name": "ghinda.net",
-  "version": "0.0.0",
-  "dependencies": {
-    "bourbon": "~4",
-    "normalize.css": "~3"
-  },
-  "devDependencies": {}
-}

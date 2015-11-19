@@ -6,8 +6,9 @@
 
 /* 3rd party
 */
-@import '../bower_components/bourbon/dist/bourbon';
-@import '../bower_components/normalize.css/normalize.css';
+@import '../node_modules/bourbon/app/assets/stylesheets/bourbon';
+@import '../node_modules/normalize.css/normalize.css';
+@import '../editr.js/editr/editr.css';
 
 /* Globals
 */
@@ -35,7 +36,7 @@ $black: #333;
 *,
 *:before,
 *:after {
-  @include box-sizing(border-box);
+  box-sizing: border-box;
 }
 
 body {
@@ -118,7 +119,7 @@ blockquote p {
 /* Header
 */
 
-header {
+.header-main {
   @include clearfix;
   position: relative;
   padding: 0 0 emCalc(60);

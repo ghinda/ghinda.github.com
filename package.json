@@ -1,0 +1,25 @@
+{
+  "name": "ghinda.github.com",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ghinda.net",
+  "dependencies": {
+    "ace-builds": "^1.2.2",
+    "bourbon": "^4.2.6",
+    "jquery": "^2.1.4",
+    "normalize.css": "^3.0.3",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {},
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ghinda/ghinda.github.com.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ghinda/ghinda.github.com/issues"
+  },
+  "homepage": "https://github.com/ghinda/ghinda.github.com#readme"
+}
