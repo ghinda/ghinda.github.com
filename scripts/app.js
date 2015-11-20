@@ -70,4 +70,12 @@
   // give it a second to get the layout
   setTimeout(init, 500);
 
+  // init editr
+  $('.editr').each(function() {
+    new Editr({
+      el: this,
+      path: '/demos',
+    });
+  });
+
 })();
