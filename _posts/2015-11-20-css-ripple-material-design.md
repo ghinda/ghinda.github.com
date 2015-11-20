@@ -24,7 +24,7 @@ button:not(:active):after {
 
 We can't trigger the animation on `:active` because that would cause the animation to abruptly end when we stop clicking.
 
-Setting the animation with the `:not(:active)` selector helps with triggering it again after the button was clicked, when the `:active` pseudo-class no longer matches. This also causes the animation to re-play when clicking the button again.
+Setting the animation with the `:not(:active)` selector helps with triggering it again after the button was clicked, when the `:active` pseudo-class no longer matches. This also makes the animation re-play when clicking the button again.
 
 Since the `:not(:active)` selector matches from the start, the animation runs once when the page loads, without any user input.
 
