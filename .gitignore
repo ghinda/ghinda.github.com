@@ -4,3 +4,4 @@ _*.swp
 .DS_Store
 Thumbs.db
 Gemfile.lock
+node_modules/.bin
