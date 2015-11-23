@@ -1,5 +1,6 @@
 body {
   padding: 0 20px;
+  min-width: 320px;
   background: #fff;
 }
 

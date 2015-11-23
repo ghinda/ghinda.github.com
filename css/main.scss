@@ -18,17 +18,7 @@ $black: #333;
 /* Imports
 */
 @import 'utils';
-@import 'themes';
 @import 'syntax';
-
-/* BrowseHappy
-*/
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
 
 /* Main
 */
@@ -40,7 +30,7 @@ $black: #333;
 }
 
 body {
-  padding-top: emCalc(60);
+  padding: emCalc(60) emCalc(12);
 
   line-height: 1.6;
 }
@@ -126,12 +116,15 @@ blockquote p {
   margin: 0 0 0 emCalc(-20);
 
   h1 {
-    float: left;
     margin: 0;
 
     font-size: emCalc(24);
     letter-spacing: emCalc(-0.1);
     vertical-align: middle;
+
+    @include breakpoint(papa-bear) {
+      float: left;
+    }
 
     a {
       border: 0;
@@ -141,7 +134,14 @@ blockquote p {
   }
 
   nav {
-    float: right;
+    padding-left: emCalc(76);
+    padding-top: emCalc(20);
+
+    @include breakpoint(papa-bear) {
+      float: right;
+      padding-top: 0;
+      padding-left: 0;
+    }
   }
 
   ul {
@@ -172,46 +172,38 @@ blockquote p {
     }
   }
 
-  .hover-bubble {
-    position: absolute;
-    left: 50%;
-    top: 0;
-    z-index: 1;
-    display: block;
-    width: emCalc(66);
-    height: emCalc(66);
-    margin-top: emCalc(-12);
-    margin-left: emCalc(-128);
-    background-color: $color1;
-
-    border-radius: 50%;
-
-    @include breakpoint(papa-bear) {
-      left: 0;
-      margin-left: 0;
-    }
-
-    @include transition(all 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.175));
-    @include transition-delay(0.1s);
-  }
-
-  .hover-bubble--nav {
-    border-radius: emCalc(20);
-  }
-
-  .hover-bubble--nav + h1 .icon-ghinda-logo {
-    margin-right: emCalc(8);
-  }
-
-  .hover-bubble--nav + h1 .icon-ghinda-logo path {
-    fill: $color1;
-  }
-
   a {
     position: relative;
     z-index: 2;
   }
+}
 
+.hover-bubble {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  display: block;
+  width: emCalc(66);
+  height: emCalc(66);
+  margin-top: emCalc(-12);
+  background-color: $color1;
+  border-radius: 50%;
+
+  @include transition(all 0.32s cubic-bezier(0.175, 0.885, 0.320, 1.175));
+  @include transition-delay(0.1s);
+}
+
+.hover-bubble--nav {
+  border-radius: emCalc(20);
+}
+
+.hover-bubble--nav + h1 .icon-ghinda-logo {
+  margin-right: emCalc(8);
+}
+
+.hover-bubble--nav + h1 .icon-ghinda-logo path {
+  fill: $color1;
 }
 
 .icon-ghinda-logo {
@@ -346,3 +338,8 @@ footer {
     font-size: emCalc(12);
   }
 }
+
+/* Themes
+ */
+
+@import 'themes';
