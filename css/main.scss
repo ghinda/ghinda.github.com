@@ -287,13 +287,9 @@ blockquote p {
     text-align: center;
   }
 
-  a {
-    display: inline-block;
-
-  }
-
   img {
     display: block;
+    width: 100%;
     margin: 0 auto emCalc(8);
   }
 }
