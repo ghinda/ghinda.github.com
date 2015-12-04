@@ -3,7 +3,7 @@ title: Mimic native browser focus styles
 layout: post
 ---
 
-When creating custom web components or widgets, elements receiving focus are sometimes hidden. This makes us have to simulate focus on other element.
+When creating custom web components or widgets, elements receiving focus are sometimes hidden. This makes us have to simulate focus on other elements.
 
 This is one way to mimic the default focus styles, as much as possible, in a cross-browser way.
 
@@ -21,7 +21,7 @@ Browsers with WebKit or Blink usually use a blue or gold glow outline. It's defi
 
 ## Custom focus
 
-These custom styles try to mimic focus on interactive controls like buttons, not on text links, so we can start by using a `2px solid` outline.
+Our custom styles try to mimic focus on interactive controls like buttons, not on text links, so we use a `2px solid` outline for starters.
 
 On WebKit we can use the `-webkit-focus-ring-color` keyword for the outline color.
 
