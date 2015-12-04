@@ -3,6 +3,6 @@ lsi: false
 highlighter: pygments
 markdown: kramdown
 permalink: /article/:title
-url: http://ghinda.net
+url: https://ghinda.net
 exclude:
   - README

@@ -31,7 +31,7 @@ WebKit browsers have `outline-style` set to `auto` by default, which looks more 
 
 Firefox and most other browsers translate `auto` to `none`. That’s why we have to use a WebKit-only media query for the outline style. To group WebKit-only properties together, we also set the WebKit specific outline color inside the media query.
 
-This is the final CSS:
+The complete CSS:
 
 {% highlight css %}
 .unreal-focus {
@@ -50,7 +50,7 @@ This is the final CSS:
 }
 {% endhighlight %}
 
-And this is how they look in browsers:
+How it looks across various browsers:
 
 ![Native and custom focus in various browsers and os's]({{ site.url }}/media/images/mimic-native-focus-screenshots.png)
 
