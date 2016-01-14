@@ -54,12 +54,24 @@
     });
   });
 
-  // init editr
-  $('.editr').each(function() {
-    new Editr({
-      el: this,
-      path: '/demos',
-    });
-  });
+  // init jotted
+  var $demos = document.querySelectorAll('.editor-demo')
+  for (var i = 0; i < $demos.length; i++) {
+    var options = {
+      files: [],
+      plugins: [ 'codemirror' ]
+    }
 
+    for (var type in { html: '', css: '', js: '' }) {
+      var url = $demos[i].getAttribute('data-' + type)
+      if (url) {
+        options.files.push({
+          type: type,
+          url: url
+        })
+      }
+    }
+
+    new Jotted($demos[i], options)
+  }
 })();

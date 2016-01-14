@@ -4,11 +4,10 @@
   "private": true,
   "description": "ghinda.net",
   "dependencies": {
-    "ace-builds": "^1.2.2",
     "bourbon": "^4.2.6",
-    "jquery": "^2.1.4",
-    "normalize.css": "^3.0.3",
-    "underscore": "^1.8.3"
+    "codemirror": "^5.10.0",
+    "jotted": "^1.0.1",
+    "normalize.css": "^3.0.3"
   },
   "devDependencies": {},
   "scripts": {},

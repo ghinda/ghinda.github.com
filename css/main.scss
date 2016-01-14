@@ -8,7 +8,6 @@
 */
 @import '../node_modules/bourbon/app/assets/stylesheets/bourbon';
 @import '../node_modules/normalize.css/normalize.css';
-@import '../editr/editr.css';
 
 /* Globals
 */
@@ -333,6 +332,13 @@ footer {
   p {
     font-size: emCalc(12);
   }
+}
+
+/* jotted
+ */
+
+.editor-demo {
+  margin: 0 0 2em;
 }
 
 /* Themes

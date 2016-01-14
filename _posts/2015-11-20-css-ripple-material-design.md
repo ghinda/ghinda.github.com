@@ -12,7 +12,7 @@ Most Material Design implementations use JavaScript for the ripple effect on the
 
 The technique is a mash of pseudo-classes that trigger an animation on a pseudo-element when matched.
 
-<div class="editr" data-item="css-material-ripples" data-files-html="button.html" data-files-css="button.css"></div>
+<div class="editor-demo" data-html="/demos/css-material-ripples/button.html" data-css="/demos/css-material-ripples/button.css"></div>
 
 For the `button` element, we create the ripple using `button:after`. Then, to trigger the animation on it, we use `button:not(:active):after`.
 
@@ -44,7 +44,7 @@ button:focus:after {
 
 Same as for `button`, we implement the ripple for checkboxes and radios using pseudo-classes, but instead of using `:active` we use `:checked`.
 
-<div class="editr" data-item="css-material-ripples" data-files-html="toggle.html" data-files-css="toggle.css"></div>
+<div class="editor-demo" data-html="/demos/css-material-ripples/toggle.html" data-css="/demos/css-material-ripples/toggle.css"></div>
 
 Since radios and checkboxes can use similar markup, we can implement the ripple using a single class on a parent container.
 
