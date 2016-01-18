@@ -19,6 +19,9 @@ Accessible CSS-only toggle switches with full keyboard access and mobile support
 * [GridLayout](https://ghinda.net/gridlayout/).
 Lightweight flexboxy grid system for advanced horizontal and vertical web app layouts, with support for older browsers.
 
+* [Jotted](https://ghinda.net/jotted/).
+Environment for showcasing HTML, CSS and JavaScript, with editable source. Like JSFiddle for self-hosted demos.
+
 * [PasswordMaker for FirefoxOS](https://github.com/ghinda/passwordmaker-mobile).
 Generate unique, secure passwords on FirefoxOS.
 
