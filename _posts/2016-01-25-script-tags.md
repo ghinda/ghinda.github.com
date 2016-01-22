@@ -1,7 +1,6 @@
 ---
 title: Run script tags in innerHTML content
 layout: post
-published: false
 ---
 
 When inserting HTML content in the DOM using innerHTML, the `script` tags inside it will not load or run. This applies to both inline scripts and external ones using the `src` attribute.
