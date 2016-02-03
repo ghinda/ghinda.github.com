@@ -1,8 +1,10 @@
 safe: true
 lsi: false
-highlighter: pygments
 markdown: kramdown
-permalink: /article/:title
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+permalink: /article/:title/
 url: https://ghinda.net
 exclude:
   - README

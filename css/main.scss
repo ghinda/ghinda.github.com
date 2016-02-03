@@ -18,6 +18,7 @@ $black: #333;
 */
 @import 'utils';
 @import 'syntax';
+@import 'jotted';
 
 /* Main
 */
@@ -56,6 +57,10 @@ h2 {
   margin: 0 0 emCalc(4);
 
   font-size: emCalc(24);
+}
+
+h3 {
+  margin: 0 0 emCalc(4);
 }
 
 p,
@@ -316,30 +321,22 @@ blockquote p {
 }
 
 /* Footer
-*/
+ */
 footer {
   padding-bottom: emCalc(40);
-
-  .footer-links {
-    overflow: hidden;
-
-    a:first-child {
-      display: inline-block;
-      margin-right: emCalc(16);
-    }
-  }
-
-  p {
-    font-size: emCalc(12);
-  }
 }
 
-/* jotted
- */
+footer p {
+  font-size: emCalc(12);
+}
 
-.editor-demo {
-  height: 20em;
-  margin: 0 0 2em;
+.footer-links {
+  overflow: hidden;
+}
+
+.footer-links a:first-child {
+  display: inline-block;
+  margin-right: emCalc(16);
 }
 
 /* Themes

@@ -6,7 +6,7 @@
   "dependencies": {
     "bourbon": "^4.2.6",
     "codemirror": "^5.10.0",
-    "jotted": "^1.0.4",
+    "jotted": "^1.1.2",
     "normalize.css": "^3.0.3"
   },
   "devDependencies": {},

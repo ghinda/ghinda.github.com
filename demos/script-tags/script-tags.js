@@ -1,28 +1,44 @@
-// insert strings into DOM
+/* insert strings into DOM
+ */
+
 var htmlContent = ''
 htmlContent += '<script src="https://code.jquery.com/jquery-2.2.0.js"><\/script>'
 htmlContent += '<script>$(document.body).append("<p>jQuery is loaded.</p>")<\/script>'
 
+// run the scripts inside the dom node
 var $container = document.querySelector('.container')
 $container.innerHTML = htmlContent
 runScripts($container)
 
-// runs array of async functions in sequential order
-function seq (index, arr) {
-  // if the first argument is an array,
-  // start with index zero
-  if (typeof index === 'object') {
-    arr = index
+/* helpers
+ */
+
+// runs an array of async functions in sequential order
+function seq (arr, callback, index) {
+  // first call, without an index
+  if (typeof index === 'undefined') {
     index = 0
   }
 
   arr[index](function () {
     index++
-    if (index !== arr.length) {
-      seq(index, arr)
+    if (index === arr.length) {
+      callback()
+    } else {
+      seq(arr, callback, index)
     }
   })
 }
+
+// trigger DOMContentLoaded
+function scriptsDone () {
+  var DOMContentLoadedEvent = document.createEvent('Event')
+  DOMContentLoadedEvent.initEvent('DOMContentLoaded', true, true)
+  document.dispatchEvent(DOMContentLoadedEvent)
+}
+
+/* script runner
+ */
 
 function insertScript ($script, callback) {
   var s = document.createElement('script')
@@ -47,21 +63,45 @@ function insertScript ($script, callback) {
   }
 }
 
-// run scripts tags from dom content
+// https://html.spec.whatwg.org/multipage/scripting.html
+var runScriptTypes = [
+  'application/javascript',
+  'application/ecmascript',
+  'application/x-ecmascript',
+  'application/x-javascript',
+  'text/ecmascript',
+  'text/javascript',
+  'text/javascript1.0',
+  'text/javascript1.1',
+  'text/javascript1.2',
+  'text/javascript1.3',
+  'text/javascript1.4',
+  'text/javascript1.5',
+  'text/jscript',
+  'text/livescript',
+  'text/x-ecmascript',
+  'text/x-javascript'
+]
+
 function runScripts ($container) {
+  // get scripts tags from a node
   var $scripts = $container.querySelectorAll('script')
   var runList = []
+  var typeAttr
 
-  for (var i = 0; i < $scripts.length; i++) {
-    runList.push((function() {
-      var $script = $scripts[i]
-      return function (callback) {
-        insertScript.call(this, $script, callback)
-      }
-    })())
-  }
+  [].forEach.call($scripts, function ($script) {
+    typeAttr = $script.getAttribute('type')
+
+    // only run script tags without the type attribute
+    // or with a javascript mime attribute value
+    if (!typeAttr || runScriptTypes.indexOf(typeAttr) !== -1) {
+      runList.push(function (callback) {
+        insertScript($script, callback)
+      })
+    }
+  })
 
   // insert the script tags sequentially
   // to preserve execution order
-  seq(runList)
+  seq(runList, scriptsDone)
 }
