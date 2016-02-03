@@ -2,7 +2,7 @@
 */
 .highlight {
   overflow: auto;
-  margin: emCalc(16) 0;
+  margin: emCalc(16) emCalc(-16);
   padding: emCalc(16);
   background-color: #3f3f3f;
 }
