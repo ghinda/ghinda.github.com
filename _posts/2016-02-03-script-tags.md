@@ -7,7 +7,7 @@ When inserting HTML content in the DOM using innerHTML, `script` tags inside it 
 
 ## `document.write`
 
-One way to load the scripts is to use `document.write`. Beside the fact that you can't always use `document.write`, another problem is that Internet Explorer 9 does not respect execution order with it. Script tags will load and execute in a random order on it.
+One way to load the scripts is to use `document.write`. The problem with it is that Internet Explorer 9 does not respect execution order. Script tags will load and execute in a random order on it.
 
 If you're writing to an iframe, you can use set the `src` attribute to `javascript: '<script>...<\/script>'`. This will work even in Internet Explorer 9 with the correct execution order.
 
@@ -31,7 +31,7 @@ To match the browser behavior we must run only tags with an omitted or valid `ty
 
 Browsers fire the [DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded) event when the document is loaded and parsed. This includes having loaded and ran all script tags.
 
-Because some of the scripts we run could rely on the event, we must trigger the event manually after all tags are loaded.
+Because some of the scripts we run could rely on the event, we must trigger the event manually after all tags load.
 
 For Internet Explorer 9 support we use [createEvent](https://developer.mozilla.org/en-US/docs/Web/API/Document/createEvent), instead of the `Event` constructor.
 
@@ -71,13 +71,13 @@ function seq (arr, callback, index) {
 }
 ```
 
-It runs an array of async functions, moving to the next one when the previous reaches the callback.
+This runs an array of async functions, moving to the next one when the previous reaches the callback.
 
 When it's all done it runs the main `callback` function.
 
 ### Script running
 
-Putting it all together, here's how the actual script running code looks:
+Putting it all together, here's the script running code:
 
 ```javascript
 function insertScript ($script, callback) {
