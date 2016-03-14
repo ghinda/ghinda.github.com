@@ -151,5 +151,5 @@ It's possible that some some external scripts will not load, so we also handle t
 
 Here's a demo of how it works:
 
-<div class="editor-demo" data-html="/demos/script-tags/script-tags.html" data-js="/demos/script-tags/script-tags.js"></div>
+<div class="editor-demo" data-html="/media/demos/script-tags/script-tags.html" data-js="/media/demos/script-tags/script-tags.js"></div>
 
