@@ -5,6 +5,11 @@ var $direct = document.querySelector('#direct-resize')
 var $step = document.querySelector('#step-resize')
 var $img = document.querySelector('img')
 
+// jotted sometimes loads the js before the html
+if (!$img) {
+  return
+}
+
 function downstep (image, size, callback) {
     var scale = 2
     var img = new Image()
