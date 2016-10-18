@@ -5,9 +5,9 @@
   "description": "ghinda.net",
   "dependencies": {
     "bourbon": "^4.2.6",
-    "codemirror": "^5.10.0",
-    "jotted": "^1.1.2",
-    "normalize.css": "^3.0.3"
+    "codemirror": "^5.19.0",
+    "jotted": "^1.4.4",
+    "normalize.css": "^5.0.0"
   },
   "devDependencies": {},
   "scripts": {},
