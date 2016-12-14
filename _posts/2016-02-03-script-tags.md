@@ -7,13 +7,27 @@ When inserting HTML content in the DOM using innerHTML, `script` tags inside it 
 
 ## `document.write`
 
-One way to load the scripts is to use `document.write`. The problem with it is that Internet Explorer 9 does not respect execution order. Script tags will load and execute in a random order on it.
+One way to load the scripts is to use `document.write`. The problem with it is that Internet Explorer 9 does not respect execution order. Each script tags will execute when loaded.
 
-If you're writing to an iframe, you can use set the `src` attribute to `javascript: '<script>...<\/script>'`. This will work even in Internet Explorer 9 with the correct execution order.
+If you're writing to an iframe, you can set the `src` attribute to `javascript: '<script>...<\/script>'`. This will work even in Internet Explorer 9 with the correct execution order.
 
 ## `eval`
 
 Another way is to load the external scripts using `XMLHttpRequest`, and run both inline and external ones with `eval`. One major drawback of this approach is that the same-origin policy restricts requests to other domains. `eval` also brings in a series of security issues.
+
+## `createContextualFragment`
+
+Hat tip to [Jake Archibald](https://jakearchibald.com/) for this.
+
+Using `createContextualFragment` to insert script tags will execute them. But, same as with `document.write`, the scripts will run as they are loaded and not in the specific order.
+
+```javascript
+var range = document.createRange()
+range.setStart($container, 0)
+$container.appendChild(
+  range.createContextualFragment('<script src="..."><\/script><script>...<\/script>')
+)
+```
 
 ## `document.createElement`
 
