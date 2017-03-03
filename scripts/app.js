@@ -59,7 +59,12 @@
   for (var i = 0; i < $demos.length; i++) {
     var options = {
       files: [],
-      plugins: [ 'codemirror' ]
+      plugins: [{
+        name: 'codemirror',
+        options: {
+          lineWrapping: true
+        }
+      }]
     }
 
     for (var type in { html: '', css: '', js: '' }) {
