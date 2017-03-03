@@ -37,3 +37,11 @@ $em-base: 16 !default;
     @media (min-width: emCalc(430)) { @content; }
   }
 }
+
+@mixin clearfix() {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
