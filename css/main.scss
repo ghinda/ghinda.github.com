@@ -166,7 +166,7 @@ blockquote p {
       font-size: emCalc(12);
       text-transform: uppercase;
 
-      @include transition(color 0.3s);
+      transition: color 0.3s;
 
       &:hover {
         border: 0;
@@ -194,8 +194,8 @@ blockquote p {
   background-color: $color1;
   border-radius: 50%;
 
-  @include transition(all 0.32s cubic-bezier(0.175, 0.885, 0.320, 1.175));
-  @include transition-delay(0.1s);
+  transition: all 0.32s cubic-bezier(0.175, 0.885, 0.320, 1.175);
+  transition-delay: 0.1s;
 }
 
 .hover-bubble--nav {
@@ -225,7 +225,7 @@ blockquote p {
 
 .icon-ghinda-logo,
 .icon-ghinda-logo path {
-  @include transition(all 0.24s);
+  transition: all 0.24s;
 }
 
 /* Home

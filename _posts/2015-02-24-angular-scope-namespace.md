@@ -6,7 +6,7 @@ theme: theme-angular
 
 The best way to work with controller scopes in Angular is to avoid using the `$scope` object as much as possible. Instead you should use the `controllerAs` syntax introduced in Angular 1.2.
 
-If for some reason you can’t use it, here’s a simple pattern that will help you handle and namespace your models.
+If for some reason you can't use it, here’s a simple pattern that will help you handle and namespace your models.
 
 At its core, this is how a basic controller using the pattern looks like:
 
@@ -14,7 +14,7 @@ At its core, this is how a basic controller using the pattern looks like:
 app.controller('MainCtrl', function($scope) {
   var model = $scope.model = {};
 
-  model.fullName = ‘’;
+  model.fullName = '';
   model.age = 30;
 });
 {% endhighlight %}
@@ -35,12 +35,12 @@ That means you can now use `model.modelName` in the controller and in the templa
 
 {% highlight javascript %}
 // in controllers
-model.modelName = ‘abc’;
+model.modelName = 'abc';
 {% endhighlight %}
 
 {% highlight html %}
 <!-- in templates -->
-<input ng-model=”model.modelName”>
+<input ng-model="model.modelName">
 {% endhighlight %}
 
 The pattern’s benefits are more obvious when using it with nested controllers.
@@ -51,14 +51,14 @@ Let’s say you want a couple of global models to use throughout the app. You ca
 app.run(function($rootScope) {
   var root = $rootScope.root = {};
 
-  root.userId = ‘abc’;
+  root.userId = 'abc';
 });
 
 app.controller('MainCtrl', function($scope) {
   var root = $scope.root;
   var model = $scope.model = {};
 
-  model.fullName = ‘’;
+  model.fullName = '';
   model.age = 30;
 });
 {% endhighlight %}
