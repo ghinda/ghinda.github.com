@@ -305,18 +305,20 @@ blockquote p {
   margin: 0;
 }
 
-.promo--alt li:first-child a {
-  padding: 0;
+.promo--alt {
+  display: table;
 }
 
-.promo--alt li:first-child a:hover {
-  border-color: transparent;
-}
-
-.promo--alt li:last-child {
-  width: 66.66%;
+.promo--alt li {
+  display: table-cell;
+  float: none;
 
   text-align: left;
+  vertical-align: middle;
+}
+
+.promo--alt li:first-child {
+  width: 12%;
 }
 
 /* Footer
