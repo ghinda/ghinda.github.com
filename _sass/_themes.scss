@@ -233,3 +233,22 @@
 .theme-ripple .hover-bubble--nav + h1 .icon-ghinda-logo path {
   fill: #3f51b5;
 }
+
+/* pouchdb
+ */
+
+.theme-pouchdb {
+  background-image: linear-gradient(180deg, #eee, #eee 4em, #fff 12em);
+}
+
+.theme-pouchdb .hover-bubble {
+  background-color: #4ec084;
+}
+
+.theme-pouchdb .header-main a {
+  color: #fa3649;
+}
+
+.theme-pouchdb .hover-bubble--nav + h1 .icon-ghinda-logo path {
+  fill: #3ba66d;
+}
