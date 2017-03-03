@@ -32,6 +32,9 @@ Unofficial mobile schedule web app for the Peninsula music festival in Romania.
 * [RightTasks for Gmail™ Browser Extension](https://github.com/ghinda/righttasks)
 Adds your Google Tasks to the right side in Gmail, like in Google Calendar. Available for [Chrome](https://chrome.google.com/webstore/detail/righttasks-for-gmail/hgniockidojcaaolfcbbkaaakbjdebpe?utm_source=chrome-ntp-icon), [Opera](https://addons.opera.com/en/extensions/details/righttasks-for-gmailtm/?display=en) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/righttasks-for-gmail/).
 
+* [siloz.io](https://www.siloz.io/)
+Private code playground in the browser. Source code is saved in the URL and never reaches the server.
+
 
 KDE Plasma Add-ons
 ------------------
