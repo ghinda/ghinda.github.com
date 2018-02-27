@@ -23,6 +23,9 @@ Lightweight flexboxy grid system for advanced horizontal and vertical web app la
 * [Jotted](https://ghinda.net/jotted/)
 Environment for showcasing HTML, CSS and JavaScript, with editable source. Like JSFiddle for self-hosted demos.
 
+* [Nudgeti](https://www.nudgeti.com/)
+Browser extension that nudges you for wasting time on websites.
+
 * [PasswordMaker for FirefoxOS](https://github.com/ghinda/passwordmaker-mobile)
 Generate unique, secure passwords on FirefoxOS.
 
