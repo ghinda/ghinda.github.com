@@ -1,5 +1,5 @@
 ---
-title: Nudgeti - waste less time on any website
+title: Nudgeti - waste less time on distracting websites
 layout: post
 theme: theme-nudgeti
 ---
