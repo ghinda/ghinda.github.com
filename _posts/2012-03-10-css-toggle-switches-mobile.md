@@ -5,9 +5,9 @@ layout: post
 
 > **Update December 2012**
 >
-> The latest version of the toggle switch has full mobile support and easy integration with [Twitter Bootstrap](http://ghinda.net/css-toggle-switch/bootstrap.html) or [ZURB Foundation](http://ghinda.net/css-toggle-switch/foundation.html).
+> The latest version of the toggle switch has full mobile support and easy integration with [Twitter Bootstrap](https://ghinda.net/css-toggle-switch/bootstrap.html) or [ZURB Foundation](https://ghinda.net/css-toggle-switch/foundation.html).
 >
-> See the latest demos: [CSS Toggle Switch](http://ghinda.net/css-toggle-switch/).
+> See the latest demos: [CSS Toggle Switch](https://ghinda.net/css-toggle-switch/).
 
 > **Update October 2012**
 >
@@ -19,7 +19,7 @@ layout: post
 >
 > These changes completely remove the need for the JavaScript functionality that was previously adding mobile support.
 >
-> Latest demos: [CSS Toggle Switch](http://ghinda.net/css-toggle-switch/).
+> Latest demos: [CSS Toggle Switch](https://ghinda.net/css-toggle-switch/).
 
 
 While testing the [CSS toggle switches](/css-toggle-switches) from my last article, I noticed they had issues, or didn't work at all, in various mobile browsers. The only mobile browsers which seemed to properly support the switches were Firefox Mobile and Opera Mobile.

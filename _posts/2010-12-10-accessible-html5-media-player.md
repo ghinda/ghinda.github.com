@@ -21,4 +21,4 @@ To finish up, I'm wrapping the media in a `<figure>` element, and pointing to a 
 Source
 ------
 * [acornmediaplayer GitHub repository](https://github.com/ghinda/acornmediaplayer/)
-* [Acorn Media Player project page](http://ghinda.net/acornmediaplayer/)
+* [Acorn Media Player project page](https://ghinda.net/acornmediaplayer/)

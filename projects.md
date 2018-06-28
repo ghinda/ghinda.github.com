@@ -5,16 +5,16 @@ title: Projects
 
 You can see [most of my projects on Github](https://github.com/ghinda).
 
-* [Acorn Media Player](http://ghinda.net/acornmediaplayer/)
+* [Acorn Media Player](https://ghinda.net/acornmediaplayer/)
 HTML5 media player with a focus on accessibility and customization.
 
-* [angular-meditor](http://ghinda.net/angular-meditor/)
+* [angular-meditor](https://ghinda.net/angular-meditor/)
 Simple floating text editor for Angular, inspired by Medium.
 
 * [Business Card Maker](http://bizcardmaker.com/)
 Create business cards in seconds, for free, using high quality professional designs.
 
-* [CSS Toggle Switch](http://ghinda.net/css-toggle-switch/)
+* [CSS Toggle Switch](https://ghinda.net/css-toggle-switch/)
 Accessible CSS-only toggle switches with full keyboard access and mobile support, using standard form controls.
 
 * [GridLayout](https://ghinda.net/gridlayout/)

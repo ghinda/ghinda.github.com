@@ -21,4 +21,4 @@ What started out more as a proof-of-concept video player ended up being a usable
 
 Therefore, I'm constantly trying to improve it, and looking for suggestions. So feel free contribute code or report issues on the [acornmediaplayer GitHub repository](https://github.com/ghinda/acornmediaplayer/).
 
-You can also check out the [Acorn Media Player](http://ghinda.net/acornmediaplayer/) project page for some demos and documentation on how to use the plugin.
+You can also check out the [Acorn Media Player](https://ghinda.net/acornmediaplayer/) project page for some demos and documentation on how to use the plugin.
