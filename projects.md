@@ -42,8 +42,8 @@ Private code playground in the browser. Source code is saved in the URL and neve
 KDE Plasma Add-ons
 ------------------
 
-* [Actos Dashboard](http://kde-look.org/content/show.php/Actos+Dashboard?content=163711)
+* [Actos Dashboard](https://github.com/ghinda/actos-dashboard)
 KWin script for managing windows, apps and activities, similar to the Gnome Shell Activities view.
 
-* [Actos SoundMenu](http://kde-look.org/content/show.php/Actos+SoundMenu?content=163707)
+* [Actos SoundMenu](https://github.com/ghinda/actos-soundmenu)
 Simple Sound Menu plasmoid with volume and playback (MPRIS) controls for the current media player.
