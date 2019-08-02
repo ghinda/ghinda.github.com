@@ -3,14 +3,11 @@ layout: static
 title: About
 ---
 
-I'm Ionuț Colceriu, from Târgu-Mureș, Romania.
+I'm Ionuț Colceriu. I design user interfaces and build web apps. Some of my free software projects are on [GitHub](https://github.com/ghinda).
 
-I design interfaces and create advanced JavaScript web apps. Some of my free software projects are on [GitHub](https://github.com/ghinda).
-
-I studied graphic and product design, and currently work with [Buiac](http://www.buiac.com/).
+I currently work on [Gorgias Templates](https://templates.gorgias.io/).
 
 You can find more details about my professional experience on [LinkedIn](http://www.linkedin.com/in/ionutcolceriu).
-
 
 ## Licensing
 
