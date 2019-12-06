@@ -5,7 +5,7 @@ title: About
 
 I'm Ionuț Colceriu. I design user interfaces and build web apps. Some of my free software projects are on [GitHub](https://github.com/ghinda).
 
-I currently work on [Gorgias Templates](https://templates.gorgias.io/).
+I work on [Gorgias Templates](https://templates.gorgias.io/).
 
 You can find more details about my professional experience on [LinkedIn](http://www.linkedin.com/in/ionutcolceriu).
 

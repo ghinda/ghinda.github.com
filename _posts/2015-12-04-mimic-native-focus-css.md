@@ -12,8 +12,7 @@ http://www.outlinenone.com/).
 
 ## Defaults
 
-By default, [Firefox](
-https://hg.mozilla.org/mozilla-central/file/tip/layout/style/html.css) and Internet Explorer use a dark thin dotted outline on links and other elements.
+By default, Firefox and Internet Explorer use a dark thin dotted outline on links and other elements.
 
 Because Firefox tries to integrate with the operating system, native components like buttons provide their own styles, including focus styles, inherited from the OS.
 
