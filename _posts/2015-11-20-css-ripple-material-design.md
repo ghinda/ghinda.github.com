@@ -16,11 +16,11 @@ The technique is a mash of pseudo-classes that trigger an animation on a pseudo-
 
 For the `button` element, we create the ripple using `button:after`. Then, to trigger the animation on it, we use `button:not(:active):after`.
 
-{% highlight css %}
+```css 
 button:not(:active):after {
   animation: ripple 1s;
 }
-{% endhighlight %}
+```
 
 We can't trigger the animation on `:active` because that would cause the animation to abruptly end when we stop clicking.
 
@@ -30,7 +30,7 @@ Since the `:not(:active)` selector matches from the start, the animation runs on
 
 To fix this, we hide the ripple, and show it only when the button is focused.
 
-{% highlight css %}
+```css 
 button:after {
   visibility: hidden;
 }
@@ -38,7 +38,7 @@ button:after {
 button:focus:after {
   visibility: visible;
 }
-{% endhighlight %}
+```
 
 ## Checkboxes and radios
 
@@ -48,7 +48,7 @@ Same as for `button`, we implement the ripple for checkboxes and radios using ps
 
 Since radios and checkboxes can use similar markup, we can implement the ripple using a single class on a parent container.
 
-{% highlight html %}
+```html 
 <div class="toggle">
   <input type="checkbox" name="c" id="c1">
   <label for="c1">Checkbox</label>
@@ -58,25 +58,25 @@ Since radios and checkboxes can use similar markup, we can implement the ripple 
   <input type="radio" name="r" id="r1" checked>
   <label for="r1">Radio</label>
 </div>
-{% endhighlight %}
+```
 
 We create the ripple on the `label:after` pseudo-element.
 
 To trigger the animation when deselecting the checkbox, we use the `.toggle input + label:after` selector.
 
-{% highlight css %}
+```css 
 .toggle input + label:after {
   animation: ripple .4s ease-out;
 }
-{% endhighlight %}
+```
 
 To re-play the animation when selecting the checkbox, or when selecting a radio button, we need to duplicate the `@keyframes`, and change the animation name.
 
-{% highlight css %}
+```css 
 .toggle input:checked + label:after {
   animation-name: rippleDuplicate;
 }
-{% endhighlight %}
+```
 
 We use the same `:focus` trick as for the button, to make sure the first animation run is not visible when the page is loaded.
 

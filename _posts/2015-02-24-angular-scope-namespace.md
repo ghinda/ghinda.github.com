@@ -10,20 +10,20 @@ If for some reason you can't use it, here’s a simple pattern that will help yo
 
 At its core, this is how a basic controller using the pattern looks like:
 
-{% highlight javascript %}
+```javascript 
 app.controller('MainCtrl', function($scope) {
   var model = $scope.model = {};
 
   model.fullName = '';
   model.age = 30;
 });
-{% endhighlight %}
+```
 
 You’ll notice the most important part at the top:
 
-{% highlight javascript %}
+```javascript 
   var model = $scope.model = {};
-{% endhighlight %}
+```
 
 What this is doing is using a big object that will contain all the models in our controller. This helps with a couple of things.
 
@@ -33,21 +33,21 @@ And second, it gives you some syntactic sugar for referencing the models. After 
 
 That means you can now use `model.modelName` in the controller and in the templates, for pointing to a model.
 
-{% highlight javascript %}
+```javascript 
 // in controllers
 model.modelName = 'abc';
-{% endhighlight %}
+```
 
-{% highlight html %}
+```html 
 <!-- in templates -->
 <input ng-model="model.modelName">
-{% endhighlight %}
+```
 
 The pattern’s benefits are more obvious when using it with nested controllers.
 
 Let’s say you want a couple of global models to use throughout the app. You can use the run block for defining the global models.
 
-{% highlight javascript %}
+```javascript 
 app.run(function($rootScope) {
   var root = $rootScope.root = {};
 
@@ -61,7 +61,7 @@ app.controller('MainCtrl', function($scope) {
   model.fullName = '';
   model.age = 30;
 });
-{% endhighlight %}
+```
 
 For namespacing, I used a different variable name(`root`) for the model in the run block. 
 
@@ -71,10 +71,10 @@ Use the same pattern for any number of parent scopes, just make sure to use diff
 
 When you want to share the same model namespace with a parent controller, you can use a slightly modified version of the `model` definition.
 
-{% highlight javascript %}
+```javascript 
 $scope.model = $scope.model || {};
 var model = $scope.model;
-{% endhighlight %}
+```
 
 This will either inherit `model` from a top controller scope, if it exists, or define it as an empty object. This means you can use it as a standard route controller, or as a nested controller that shares the `model` namespace with its parent.
 

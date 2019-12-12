@@ -30,9 +30,9 @@ Make sure you have `adb` installed. If you’re running Ubuntu you just need to 
 
 Connect the device to your PC and, in a terminal, run:
 
-{% highlight bash %}
+```bash
 sudo adb devices
-{% endhighlight %}
+```
 
 Your device should show up in a list.
 
@@ -45,9 +45,9 @@ Otherwise, if your device has plenty of internal memory, you can just leave the 
 
 Now run the script with:
 
-{% highlight bash %}
+```bash 
 ./optware-install-via-adb.sh
-{% endhighlight %}
+```
 
 This will install [Optware for Android](https://github.com/pfalcon/optware-android) on your device.
 
@@ -55,14 +55,14 @@ We now have a proper package manager on the device, so we’ll open a shell and 
 
 Connect to the `adb shell` and start the Optware shell with:
 
-{% highlight bash %}
+```bash 
 adb shell
 ./data/sdext2/opt/start.sh
-{% endhighlight %}
+```
 
 Now install everything related to Transmission (torrent server), FlexGet (automatic downloads), OpenSSH and Samba.
 
-{% highlight bash %}
+```bash 
 ipkg update
 ipkg install nano
 ipkg install transmission
@@ -81,7 +81,7 @@ easy_install flexget # in case of easy_install error, edit opt/lib/python2.6/dis
 easy_install periscope # for subtitles
 
 easy_install pip # just to be able to remove packages
-{% endhighlight %}
+```
 
 Now that we installed the packages, we’ll start configuring them.
 
@@ -91,42 +91,42 @@ We’ll enable connecting by SSH using your public key. I’m assuming you alrea
 
 Edit the `/opt/etc/openssh/sshd_config` file, and set the `RSAAuthentication` and `PubkeyAuthentication` to:
 
-{% highlight bash %}
+```bash 
 RSAAuthentication yes
 PubkeyAuthentication yes
-{% endhighlight %}
+```
 
 You can edit the file with Nano, since we installed it before:
 
-{% highlight bash %}
+```bash 
 nano /opt/etc/openssh/sshd_config
-{% endhighlight %}
+```
 
 Edit the `/opt/home/root/.ssh/authorized_keys` file, and paste the contents of your local public key file (`./pub`) in it.
 
 Same as before, you can use Nano for this:
 
-{% highlight bash %}
+```bash 
 nano /opt/home/root/.ssh/authorized_keys
-{% endhighlight %}
+```
 
 Now restart OpenSSH with:
 
-{% highlight bash %}
+```bash 
 /opt/etc/init.d/S40sshd
-{% endhighlight %}
+```
 
 Sometimes when restarting OpenSSH, it will complain about the host key. If it does, create it with:
 
-{% highlight bash %}
+```bash 
 ssh-keygen -t ecdsa -f /opt/etc/openssh/ssh_host_ecdsa_key -N ''
-{% endhighlight %}
+```
 
 Exit the ADB shell, and you should now be able to get on the device using SSH:
 
-{% highlight bash %}
+```bash 
 ssh root@192.168.1.X
-{% endhighlight %}
+```
 
 Now that we have SSH, you can also log-in onto your device using something like [FileZilla](https://filezilla-project.org/) for easier file access.
 
@@ -136,9 +136,9 @@ I won’t go into much detail about the Samba config. Download my [smb.conf](htt
 
 Now restart Samba with
 
-{% highlight bash %}
+```bash 
 /opt/etc/init.d/S08samba
-{% endhighlight %}
+```
 
 and it should be working.
 
@@ -152,18 +152,18 @@ There is an issue with Samba that is preventing you from deleting any files on t
 
 Add this to your `/etc/fstab` to mount the share with `cifs`:
 
-{% highlight bash %}
+```bash 
 //192.168.1.X/sdcard /media/MOUNT_POINT cifs users,username=root,password="",rw,nounix,iocharset=utf8,file_mode=0777,dir_mode=0777 0 0
-{% endhighlight %}
+```
 
 ## Configure Transmission
 
 Run the `transmission-daemon` first, then stop it, so it will create its config file.
 
-{% highlight bash %}
+```bash 
 transmission-daemon
 killall transmission-daemon
-{% endhighlight %}
+```
 
 You can edit the config file at `opt/home/root/.config/transmission-daemon/settings.json`, or just use my [settings.json](https://github.com/ghinda/optware-mediacenter/blob/master/opt/home/root/.config/transmission-daemon/settings.json).
 
@@ -173,9 +173,9 @@ These are both already done in my [settings.json](https://github.com/ghinda/optw
 
 Once you have the config set-up, start transmission with:
 
-{% highlight bash %}
+```bash 
 transmission-daemon
-{% endhighlight %}
+```
 
 
 ## Configure FlexGet

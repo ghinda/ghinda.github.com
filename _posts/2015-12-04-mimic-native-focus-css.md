@@ -32,7 +32,7 @@ Firefox and most other browsers translate `auto` to `none`. That’s why we have
 
 The complete CSS:
 
-{% highlight css %}
+```css 
 .unreal-focus {
   outline-width: 2px;
   outline-style: solid;
@@ -47,7 +47,7 @@ The complete CSS:
     outline-style: auto;
   }
 }
-{% endhighlight %}
+```
 
 How it looks across various browsers:
 
