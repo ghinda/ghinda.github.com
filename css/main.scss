@@ -302,28 +302,27 @@ blockquote p {
   }
 }
 
-.promo--alt a {
-  max-width: 100%;
+.promo--alt li > a {
+  display: inline-block;
+
+  border: 0;
 }
 
 .promo--alt img {
   margin: 0;
+  width: 240px;
 }
 
 .promo--alt {
   display: table;
+  width: 100%;
 }
 
 .promo--alt li {
   display: table-cell;
   float: none;
 
-  text-align: left;
   vertical-align: middle;
-}
-
-.promo--alt li:first-child {
-  width: 26%;
 }
 
 /* Footer
