@@ -3,5 +3,4 @@ _site
 _*.swp
 .DS_Store
 Thumbs.db
-Gemfile.lock
 node_modules/.bin

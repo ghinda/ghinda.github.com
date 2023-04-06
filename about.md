@@ -19,5 +19,5 @@ The source-code is under the MIT license, unless otherwise noted.
 
 * Twitter: [@ghindas](https://twitter.com/ghindas)
 * GitHub: [ghinda](http://github.com/ghinda)
-* LinkedIn: [Cristian-Ionut Colceriu](http://www.linkedin.com/in/ionutcolceriu)
+* LinkedIn: [Ionuț Colceriu](http://www.linkedin.com/in/ionutcolceriu)
 * Email: [contact@ghinda.net](mailto:contact@ghinda.net)
