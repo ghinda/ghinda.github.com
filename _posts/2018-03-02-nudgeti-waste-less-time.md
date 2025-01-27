@@ -28,8 +28,8 @@ One solution is to block the websites, but this also blocks their utility aspect
 
 * It won't interrupt you or stop you from going to any website.
 
-<a href="{{ site.url }}/media/images/nudgeti-firefox-plasma-list.png">
-  <img src="{{ site.url }}/media/images/nudgeti-firefox-plasma-list.png" alt="Nudgeti notifications in KDE Plasma">
+<a href="/media/images/nudgeti-firefox-plasma-list.png">
+  <img src="/media/images/nudgeti-firefox-plasma-list.png" alt="Nudgeti notifications in KDE Plasma">
 </a>
 
 ## Notifications

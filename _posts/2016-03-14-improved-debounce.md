@@ -17,7 +17,7 @@ The problem with the existing approaches is that they trigger only on the traili
 
 For example, using a debouncer on the `keyup` event will only trigger the function once you stopped typing. It will not fire when you start typing.
 
-![Typing in a textfield and showing the keyup debounced callback being called only when we stop typing.]({{ site.url }}/media/images/debounce-regular.gif)
+![Typing in a textfield and showing the keyup debounced callback being called only when we stop typing.](/media/images/debounce-regular.gif)
 
 
 ## Improved debouncer

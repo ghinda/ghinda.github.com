@@ -1,4 +1,4 @@
 permalink: /article/:title/
-url: https://ghinda.net
+url: https://www.ghinda.net
 exclude:
   - README

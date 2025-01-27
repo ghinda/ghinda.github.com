@@ -5,22 +5,22 @@ title: Projects
 
 You can see [most of my projects on Github](https://github.com/ghinda).
 
-* [Acorn Media Player](https://ghinda.net/acornmediaplayer/)
+* [Acorn Media Player](/acornmediaplayer/)
 HTML5 media player with a focus on accessibility and customization.
 
-* [angular-meditor](https://ghinda.net/angular-meditor/)
+* [angular-meditor](/angular-meditor/)
 Simple floating text editor for Angular, inspired by Medium.
 
 * [Business Card Maker](http://bizcardmaker.com/)
 Create business cards in seconds, for free, using high quality professional designs.
 
-* [CSS Toggle Switch](https://ghinda.net/css-toggle-switch/)
+* [CSS Toggle Switch](/css-toggle-switch/)
 Accessible CSS-only toggle switches with full keyboard access and mobile support, using standard form controls.
 
-* [GridLayout](https://ghinda.net/gridlayout/)
+* [GridLayout](/gridlayout/)
 Lightweight flexboxy grid system for advanced horizontal and vertical web app layouts, with support for older browsers.
 
-* [Jotted](https://ghinda.net/jotted/)
+* [Jotted](/jotted/)
 Environment for showcasing HTML, CSS and JavaScript, with editable source. Like JSFiddle for self-hosted demos.
 
 * [Nudgeti](https://www.nudgeti.com/)

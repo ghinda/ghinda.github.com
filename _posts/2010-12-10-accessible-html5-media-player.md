@@ -15,10 +15,10 @@ For the sliders, I'm using the ARIA slider `role`, and some further attributes t
 
 To finish up, I'm wrapping the media in a `<figure>` element, and pointing to a `<figcaption>` element inside it using `aria-describedby` to provide a better description of the media element. I'm not totally sold on this markup approach, but when browsers will expose the new HTML5 elements to screen-readers better, we probably won't need the `aria-describedby` attribute any longer.
 
-*Read the complete article on [Dev.Opera](http://dev.opera.com/): [A more accessible HTML5 `<video>` player](http://dev.opera.com/articles/view/more-accessible-html5-video-player/).*
+*Read the complete article on [Dev.Opera](http://dev.opera.com/): [A more accessible HTML5 `<video>` player](https://web.archive.org/web/20200712114530/https://dev.opera.com/articles/more-accessible-html5-video-player/).*
 
 
 Source
 ------
 * [acornmediaplayer GitHub repository](https://github.com/ghinda/acornmediaplayer/)
-* [Acorn Media Player project page](https://ghinda.net/acornmediaplayer/)
+* [Acorn Media Player project page](/acornmediaplayer/)

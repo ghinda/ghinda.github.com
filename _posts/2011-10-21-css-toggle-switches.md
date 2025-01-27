@@ -6,9 +6,9 @@ layout: post
 
 > **Update December 2012**
 >
-> The latest version of the toggle switch has full mobile support and easy integration with [Twitter Bootstrap](https://ghinda.net/css-toggle-switch/bootstrap.html) or [ZURB Foundation](https://ghinda.net/css-toggle-switch/foundation.html).
+> The latest version of the toggle switch has full mobile support and easy integration with [Twitter Bootstrap](/css-toggle-switch/bootstrap.html) or [ZURB Foundation](/css-toggle-switch/foundation.html).
 >
-> See the latest demos: [CSS Toggle Switch](https://ghinda.net/css-toggle-switch/).
+> See the latest demos: [CSS Toggle Switch](/css-toggle-switch/).
 
 Back in August I saw [Orman Clark](http://www.premiumpixels.com)'s latest work at the time, a [set of beautiful toggle switches](http://www.premiumpixels.com/freebies/sort-switches-toggles-psd/), and decided I'd have a go at creating a functional version of them.
 

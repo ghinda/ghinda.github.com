@@ -51,5 +51,5 @@ The complete CSS:
 
 How it looks across various browsers:
 
-![Native and custom focus in various browsers and os's]({{ site.url }}/media/images/mimic-native-focus-screenshots.png)
+![Native and custom focus in various browsers and os's](/media/images/mimic-native-focus-screenshots.png)
 
